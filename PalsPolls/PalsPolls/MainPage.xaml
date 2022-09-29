@@ -4,7 +4,12 @@
              x:Class="PalsPolls.MainPage">
 
     <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="#2196F3"
+          Padding="24"
+          CornerRadius="0">
+            <Label Text="Welcome to Pal Polls!"
+              HorizontalTextAlignment="Center"
+              TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="This is the MainPage.xaml"
           FontSize="Title"
