@@ -14,15 +14,8 @@
             </Image>
                
                 
-            <Entry Placeholder="Username"
-                   TextColor="White"
-                   PlaceholderColor="Gray">
-            </Entry>
-            <Entry Placeholder="Password"
-                   IsPassword="True"
-                   TextColor="White"
-                   PlaceholderColor="Gray">
-            </Entry>
+            <Entry x:Name="txtUsername" Placeholder="Username" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="Gray"> </Entry>
             <Button
                 VerticalOptions="Center"
                 Text="Login"              
@@ -30,8 +23,20 @@
                 BackgroundColor="Transparent"
                 BorderWidth="1.5"
                 CornerRadius="50"
-                BorderColor="Transparent">
+                BorderColor="ForestGreen" 
+                Clicked="Button_Clicked">
             </Button>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an account? " TextColor="LightGray"/>
+                        <Span Text="Register " TextColor="LightGray" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>                   
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
