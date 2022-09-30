@@ -8,14 +8,22 @@
         <StackLayout Padding="40"
                      VerticalOptions="Center"
                      HorizontalOptions="FillAndExpand">            
-            <Image Source="PPlogo.png"
+            <Image Source="A=PPlogo.png"
                    WidthRequest="180"
                    HeightRequest="180">
             </Image>
                
                 
-            <Entry x:Name="txtUsername" Placeholder="Username" TextColor="Black" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="Black" PlaceholderColor="Gray"> </Entry>
+            <Entry x:Name="txtUsername"
+                   Placeholder="Username"
+                   TextColor="Black"
+                   PlaceholderColor="Gray"/>
+            <Entry x:Name="txtPassword"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   TextColor="Black"
+                   PlaceholderColor="Gray"
+                    />
             <Button
                 VerticalOptions="Center"
                 Text="Login"              
@@ -24,13 +32,16 @@
                 BorderWidth="1.5"
                 CornerRadius="50"
                 BorderColor="ForestGreen" 
-                Clicked="Button_Clicked">
-            </Button>
+                Clicked="Button_Clicked"/>
+
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Don't have an account? " TextColor="LightGray"/>
-                        <Span Text="Register " TextColor="LightGray" FontAttributes="Bold" TextDecorations="Underline"/>
+                        <Span Text="Don't have an account? "
+                              TextColor="LightGray"/>
+                        <Span Text="Register"
+                              TextColor="LightGray"
+                              TextDecorations="Underline"/>
                     </FormattedString>                   
                 </Label.FormattedText>
                 <Label.GestureRecognizers>

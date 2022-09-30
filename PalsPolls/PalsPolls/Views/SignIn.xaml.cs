@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.IO;
+using PalsPolls.Tables;
+using SQLite;
 using Xamarin.Forms;
-
 namespace PalsPolls
 {
     public partial class SignIn : ContentPage
@@ -12,21 +13,35 @@ namespace PalsPolls
             InitializeComponent();
         }
 
-        void Button_Clicked(System.Object sender, System.EventArgs e)
+        async  void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            if(txtUsername.Text=="Admin" && txtPassword.Text=="123")
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db");
+            var db = new SQLiteConnection(dbpath);
+            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && u.Password.Equals(txtPassword.Text)).FirstOrDefault();
+
+            if (myquery != null)
             {
-                Navigation.PushAsync(new HomePage());
+                App.Current.MainPage = new NavigationPage(new HomePage());
             }
             else
             {
-                DisplayAlert("Oops..", "Username or Password is incorrect!", "Ok");
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var result = await this.DisplayAlert("Oops..", "Username or Password is incorrect!", "Okay", "Cancel");
+
+                    if (result)
+                        await Navigation.PushAsync(new SignIn());
+                    else
+                    {
+                        await Navigation.PushAsync(new SignIn());
+                    }
+                });
             }
         }
 
-        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+        async  void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new RegisterPage());
+            await Navigation.PushAsync(new RegisterPage());
         }
     }
 }

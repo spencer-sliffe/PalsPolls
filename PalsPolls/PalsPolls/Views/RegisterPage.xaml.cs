@@ -14,7 +14,7 @@ namespace PalsPolls
             InitializeComponent();
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+       void Handle_Clicked(object sender, System.EventArgs e)
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db");
             var db = new SQLiteConnection(dbpath);
@@ -31,7 +31,11 @@ namespace PalsPolls
             db.Insert(item);
             Device.BeginInvokeOnMainThread(async () =>
             {
-                var result = await this.DisplayAlert("Congradulations", "User Registration Successful", "Yes", "Cancel");
+                var result = await this.DisplayAlert("Congradulations", "User Registration Successful", "Okay", "Cancel");
+
+                if (result)
+                    await Navigation.PushAsync(new SignIn());
+                
             });
         }
     }

@@ -4,11 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.HomePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to the HomePage"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" /> 
-        </StackLayout>
+        <Button Text="Logout"
+                TextColor="#0077be"
+                Clicked="Button_Clicked"/>
     </ContentPage.Content>
 </ContentPage>
 
