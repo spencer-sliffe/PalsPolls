@@ -13,7 +13,7 @@ namespace PalsPolls
             InitializeComponent();
         }
 
-        async  void Button_Clicked(System.Object sender, System.EventArgs e)
+        void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db");
             var db = new SQLiteConnection(dbpath);
