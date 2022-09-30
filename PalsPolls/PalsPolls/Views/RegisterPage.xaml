@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PalsPolls.RegisterPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20, 0, 20, 0"
+                       VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0">
+                        <Entry Placeholder="Username"
+                               FontSize="16"
+                               x:Name="EntryUserName"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1">
+                        <Entry Placeholder="Password"
+                               IsPassword="True"
+                               FontSize="16"
+                               x:Name="EntryUserPassword"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
+                        <Entry Placeholder="Email"
+                               FontSize="16"
+                               x:Name="EntryUserEmail"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3">
+                        <Entry Placeholder="Phone Number"
+                               FontSize="16"
+                               x:Name="EntryUserPhoneNumber"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4">
+                        <Button Text="Register"
+                                HorizontalOptions="CenterAndExpand"
+                                TextColor="White"
+                                BackgroundColor="Blue"
+                                WidthRequest="100"
+                                Clicked="Handle_Clicked"></Button>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
