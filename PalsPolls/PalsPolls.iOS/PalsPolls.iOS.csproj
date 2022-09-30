@@ -68,6 +68,9 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -118,6 +121,10 @@
     <ImageAsset Include="Assets.xcassets\PPlogo.imageset\PPlogo.png" />
     <ImageAsset Include="Assets.xcassets\PPlogo.imageset\PPlogo 2.png" />
     <ImageAsset Include="Assets.xcassets\PPlogo.imageset\PPlogo 1.png" />
+    <ImageAsset Include="Assets.xcassets\icon.png.imageset\icon.png" />
+    <ImageAsset Include="Assets.xcassets\icon.png.imageset\icon 2.png" />
+    <ImageAsset Include="Assets.xcassets\icon.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon.png.imageset\icon 1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
