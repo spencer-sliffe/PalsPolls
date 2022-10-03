@@ -20,7 +20,8 @@
                     <StackLayout Grid.Row="0">
                         <Entry Placeholder="Username"
                                FontSize="16"
-                               x:Name="EntryUserName"/>
+                               x:Name="EntryUserName"
+                               />
                     </StackLayout>
 
                     <StackLayout Grid.Row="1">
@@ -33,13 +34,15 @@
                     <StackLayout Grid.Row="2">
                         <Entry Placeholder="Email"
                                FontSize="16"
-                               x:Name="EntryUserEmail"/>
+                               x:Name="EntryUserEmail"
+                               Keyboard="Email"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3">
                         <Entry Placeholder="Phone Number"
                                FontSize="16"
-                               x:Name="EntryUserPhoneNumber"/>
+                               x:Name="EntryUserPhoneNumber"
+                               Keyboard="Telephone"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="4">
