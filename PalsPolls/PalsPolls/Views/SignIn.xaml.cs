@@ -10,6 +10,7 @@ namespace PalsPolls
     {
         public SignIn()
         {
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
         }
 

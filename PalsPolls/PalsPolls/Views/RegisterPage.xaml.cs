@@ -4,6 +4,7 @@ using System.IO;
 using PalsPolls.Tables;
 using SQLite;
 using Xamarin.Forms;
+using System.Text.RegularExpressions;
 
 namespace PalsPolls
 {
@@ -14,29 +15,45 @@ namespace PalsPolls
             InitializeComponent();
         }
 
+        //Function for account registration
        void Handle_Clicked(object sender, System.EventArgs e)
         {
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db");
-            var db = new SQLiteConnection(dbpath);
-            db.CreateTable<RegUserTable>();
+            var email = EntryUserEmail.Text;
 
-            var item = new RegUserTable()
+            var emailPattern = "^(?(\")(\".+?(?<!\\\\)\"@)|(([0-9a-z]((\\.(?!\\.))|[-!#\\$%&'\\*\\+/=\\?\\^`\\{\\}\\|~\\w])*)(?<=[0-9a-z])@))(?(\\[)(\\[(\\d{1,3}\\.){3}\\d{1,3}\\])|(([0-9a-z][-\\w]*[0-9a-z]*\\.)+[a-z0-9][\\-a-z0-9]{0,22}[a-z0-9]))$";
+
+            if (Regex.IsMatch(email, emailPattern))
             {
-                UserName = EntryUserName.Text,
-                Password = EntryUserPassword.Text,
-                Email = EntryUserEmail.Text,
-                PhoneNumber = EntryUserPhoneNumber.Text
-            };
+                var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db"); //Database path
+                var db = new SQLiteConnection(dbpath);
+                db.CreateTable<RegUserTable>();
 
-            db.Insert(item);
-            Device.BeginInvokeOnMainThread(async () =>
+                //new user
+                var item = new RegUserTable()
+                {
+                    UserName = EntryUserName.Text,
+                    Password = EntryUserPassword.Text,
+                    Email = EntryUserEmail.Text,
+                    PhoneNumber = EntryUserPhoneNumber.Text
+                };
+
+                //new database item
+                db.Insert(item);
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var result = await this.DisplayAlert("Congratulations", "User Registration Successful", "Okay", "Cancel");
+
+                    if (result)
+                        await Navigation.PushAsync(new SignIn());
+
+                });
+            }
+            else
             {
-                var result = await this.DisplayAlert("Congradulations", "User Registration Successful", "Okay", "Cancel");
+                ErrorLabel.Text = "Email is not valid";
+            }
+            
 
-                if (result)
-                    await Navigation.PushAsync(new SignIn());
-                
-            });
         }
     }
 }
