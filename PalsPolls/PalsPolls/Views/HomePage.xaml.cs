@@ -9,6 +9,9 @@ namespace PalsPolls
     {
         public HomePage()
         {
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
+
+
             InitializeComponent();
         }
 

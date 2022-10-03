@@ -3,53 +3,71 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.SignIn"
-    BackgroundColor="White">  
+    BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Padding ="40"
-                     VerticalOptions="Center"
-                     HorizontalOptions="FillAndExpand">            
-            <Image Source="icon.png"
-                   WidthRequest="140"
-                   HeightRequest="140"
-                   >
-            </Image>
-               
-                
-            <Entry x:Name="txtUsername"
-                   Placeholder="Username"
-                   TextColor="Black"
-                   PlaceholderColor="Gray"/>
-            <Entry x:Name="txtPassword"
-                   Placeholder="Password"
-                   IsPassword="True"
-                   TextColor="Black"
-                   PlaceholderColor="Gray"/>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20, 0, 20, 0"
+                      VerticalOptions="CenterAndExpand"
+                      RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-            <Button
-                VerticalOptions="Center"
-                Text="Login"              
-                TextColor="Black"
-                BackgroundColor="Transparent"
-                BorderWidth="1.5"
-                CornerRadius="50"
-                BorderColor="Transparent"
-                Clicked="Button_Clicked"/>
+                    <StackLayout Grid.Row="0">
+                        <Image Source="icon.png"
+                               WidthRequest="140"
+                               HeightRequest="140"/>
 
-            <Label HorizontalOptions="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Don't have an account? "
-                              TextColor="Blue"/>
-                        <Span Text="Register"
-                              TextColor="Blue"
-                              TextDecorations="Underline"/>
-                    </FormattedString>                   
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Label.GestureRecognizers>
-            </Label>
-        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1">
+                        <Entry x:Name="txtUsername"
+                                Placeholder="Username"
+                                TextColor="Black"
+                                PlaceholderColor="Gray"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
+                        <Entry x:Name="txtPassword"
+                                Placeholder="Password"
+                                IsPassword="True"
+                                TextColor="Black"
+                                PlaceholderColor="Gray"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3">
+                        <Button
+                            VerticalOptions="Center"
+                            Text="Login"              
+                            TextColor="Black"
+                            BackgroundColor="Transparent"
+                            BorderWidth="1.5"
+                            CornerRadius="50"
+                            BorderColor="Transparent"
+                            Clicked="Button_Clicked"/>
+
+                        <Label HorizontalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Don't have an account? "
+                                            TextColor="Blue"/>
+                                    <Span Text="Register"
+                                            TextColor="Blue"                     
+                                            TextDecorations="Underline"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
 
