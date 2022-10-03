@@ -8,9 +8,10 @@
         <StackLayout Padding ="40"
                      VerticalOptions="Center"
                      HorizontalOptions="FillAndExpand">            
-            <Image Source="A=icon.png"
-                   WidthRequest="180"
-                   HeightRequest="180">
+            <Image Source="icon.png"
+                   WidthRequest="140"
+                   HeightRequest="140"
+                   >
             </Image>
                
                 
@@ -22,12 +23,12 @@
                    Placeholder="Password"
                    IsPassword="True"
                    TextColor="Black"
-                   PlaceholderColor="Gray"
-                    />
+                   PlaceholderColor="Gray"/>
+
             <Button
                 VerticalOptions="Center"
                 Text="Login"              
-                TextColor="White"
+                TextColor="Black"
                 BackgroundColor="Transparent"
                 BorderWidth="1.5"
                 CornerRadius="50"

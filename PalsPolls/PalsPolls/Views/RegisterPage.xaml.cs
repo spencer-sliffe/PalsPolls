@@ -14,12 +14,14 @@ namespace PalsPolls
             InitializeComponent();
         }
 
+        //Function for account registration
        void Handle_Clicked(object sender, System.EventArgs e)
         {
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db");
-            var db = new SQLiteConnection(dbpath);
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db"); //Database path
+            var db = new SQLiteConnection(dbpath); 
             db.CreateTable<RegUserTable>();
 
+            //new user
             var item = new RegUserTable()
             {
                 UserName = EntryUserName.Text,
@@ -28,10 +30,11 @@ namespace PalsPolls
                 PhoneNumber = EntryUserPhoneNumber.Text
             };
 
+            //new database item
             db.Insert(item);
             Device.BeginInvokeOnMainThread(async () =>
             {
-                var result = await this.DisplayAlert("Congradulations", "User Registration Successful", "Okay", "Cancel");
+                var result = await this.DisplayAlert("Congratulations", "User Registration Successful", "Okay", "Cancel");
 
                 if (result)
                     await Navigation.PushAsync(new SignIn());

@@ -35,7 +35,9 @@
                         <Entry Placeholder="Email"
                                FontSize="16"
                                x:Name="EntryUserEmail"
-                               Keyboard="Email"/>
+                               Keyboard="Email">
+                        </Entry>
+           
                     </StackLayout>
 
                     <StackLayout Grid.Row="3">
