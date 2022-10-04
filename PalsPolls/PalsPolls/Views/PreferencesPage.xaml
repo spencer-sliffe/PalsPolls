@@ -16,7 +16,7 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Username from Data Base*"
+                            <Label Text="Spencer: *Function to Get Username from Data Base*"
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="Black"/>
                         </StackLayout>
@@ -30,7 +30,7 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Phone # from Data Base*"
+                            <Label Text="Spencer: *Function to Get Phone # from Data Base*"
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="Black"/>
                         </StackLayout>
