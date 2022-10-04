@@ -5,7 +5,7 @@
     x:Class="PalsPolls.RegisterPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BackgroundColor="#CDD7DC">
                 <Grid Margin="20, 0, 20, 0"
                       VerticalOptions="CenterAndExpand"
                       RowSpacing="20">

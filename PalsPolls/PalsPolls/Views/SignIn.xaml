@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.SignIn"
-    BackgroundColor="White">
+    BackgroundColor="#CDD7DC">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -45,8 +45,6 @@
                             Text="Login"              
                             TextColor="Black"
                             BackgroundColor="Transparent"
-                            BorderWidth="1.5"
-                            CornerRadius="50"
                             BorderColor="Transparent"
                             Clicked="Button_Clicked"/>
 

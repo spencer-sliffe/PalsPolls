@@ -5,7 +5,7 @@
     x:Class="PalsPolls.Views.PreferencesPage"
     Title="Settings">
     <ContentPage.Content>
-       <TableView Intent="Settings">
+       <TableView Intent="Settings" BackgroundColor="#CDD7DC">
             <TableRoot>
                 <TableSection Title="Account">
                     <ViewCell>
