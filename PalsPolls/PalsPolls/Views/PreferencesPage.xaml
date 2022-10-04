@@ -7,8 +7,12 @@
        <TableView Intent="Settings">
             <TableRoot>
                 <TableSection Title="Account">
-                    <SwitchCell Text="example" />
-                    <SwitchCell Text="example" On="true" />
+                    <SwitchCell Text="Example"
+                                On="True" />
+                    <SwitchCell Text="Example"
+                                On="true" />                   
+                    <TextCell Text="General"
+                              Tapped="TextCell_Tapped" />                                
                 </TableSection>
             </TableRoot>
         </TableView>

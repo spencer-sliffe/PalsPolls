@@ -16,6 +16,11 @@ namespace PalsPolls.Views
         {
             await Navigation.PushAsync(new SignIn());
         }
+
+        async void TextCell_Tapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new PreferencesPage());
+        }
     }
 }
 
