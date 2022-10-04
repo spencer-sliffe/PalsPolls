@@ -18,19 +18,17 @@
                                VerticalOptions="StartAndExpand"
                                HorizontalOptions="EndAndExpand"
                                WidthRequest="40"
-                               HeightRequest="40"/>
+                               HeightRequest="40">
+                            <Image.GestureRecognizers>
+
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                            </Image.GestureRecognizers>
+
+                        </Image>
+                               
                     </StackLayout>
-
-
-                </Grid>
-                <StackLayout VerticalOptions="EndAndExpand"
-                             HorizontalOptions="CenterAndExpand"> 
-
-                    <Button Text="Logout"
-                            TextColor="Blue"
-                            Clicked="Button_Clicked"
-                            VerticalOptions="CenterAndExpand"/>
-                </StackLayout>
+                </Grid> 
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using PalsPolls.Views;
 using Xamarin.Forms;
 
 namespace PalsPolls
@@ -15,9 +15,11 @@ namespace PalsPolls
             InitializeComponent();
         }
 
-        async void Button_Clicked(System.Object sender, System.EventArgs e)
+        
+
+        private async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new SignIn());
+            await Navigation.PushAsync(new PreferencesPage());
         }
     }
 }
