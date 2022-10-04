@@ -4,16 +4,33 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.HomePage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Image Source="icon.png"
-                   VerticalOptions="CenterAndExpand"/>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20, 0, 20, 0"
+                      VerticalOptions="StartAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
 
-            <Button Text="Logout"
-                    TextColor="Blue"
-                    Clicked="Button_Clicked"
-                    VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+                    <StackLayout Grid.Row="0">
+                        <Image Source="settings.png"
+                               VerticalOptions="StartAndExpand"
+                               HorizontalOptions="EndAndExpand"
+                               WidthRequest="40"
+                               HeightRequest="40">
+                            <Image.GestureRecognizers>
+
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                            </Image.GestureRecognizers>
+
+                        </Image>
+                               
+                    </StackLayout>
+                </Grid> 
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
 
