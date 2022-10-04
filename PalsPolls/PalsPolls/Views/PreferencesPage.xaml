@@ -2,17 +2,71 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PalsPolls.Views.PreferencesPage">
+    x:Class="PalsPolls.Views.PreferencesPage"
+    Title="Settings">
     <ContentPage.Content>
        <TableView Intent="Settings">
             <TableRoot>
                 <TableSection Title="Account">
-                    <SwitchCell Text="Example"
-                                On="True" />
-                    <SwitchCell Text="Example"
-                                On="true" />                   
-                    <TextCell Text="General"
-                              Tapped="TextCell_Tapped" />                                
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="icon.png"/>
+                            <Label Text="Username:"
+                                   TextColor="Black"
+                                   FontSize="20"
+                                   WidthRequest="150"
+                                   VerticalTextAlignment="Center"/>
+                            <Label Text="*Function to Get Username from Data Base*"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                   
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="phone.png"/>
+                            <Label Text="Phone #:"
+                                   TextColor="Black"
+                                   FontSize="20"
+                                   WidthRequest="150"
+                                   VerticalTextAlignment="Center"/>
+                            <Label Text="*Function to Get Phone # from Data Base*"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="Email.png"/>
+                            <Label Text="Email:"
+                                   TextColor="Black"
+                                   FontSize="20"
+                                   WidthRequest="150"
+                                   VerticalTextAlignment="Center"/>
+                            <Label Text="*Function to Get Email from Data Base*"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+
+                     <ViewCell Tapped="ViewCell_Tapped">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label Text="Change Password"
+                                   TextColor="Red"
+                                   FontSize="16"/>
+                        </StackLayout>
+
+
+                    </ViewCell>
+                     <ViewCell Tapped="ViewCell_Tapped_1">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label Text="Logout"
+                                   TextColor="blue"
+                                   FontSize="16"/>
+                        </StackLayout>
+
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>

@@ -151,5 +151,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\icon.png" />
     <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\phone.png" />
+    <BundleResource Include="Resources\Email.png" />
   </ItemGroup>
 </Project>
