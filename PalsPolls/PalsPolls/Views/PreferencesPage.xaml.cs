@@ -28,6 +28,11 @@ namespace PalsPolls.Views
         {
             await Navigation.PushAsync(new SignIn());
         }
+
+        class getUserInfo
+        {
+            //this is how we will access the database for the settings page...
+        }
     }
 }
 
