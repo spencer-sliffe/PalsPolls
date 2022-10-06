@@ -1,0 +1,2 @@
+This folder is for documenting our project.
+There are examples online we need to look at and use as references.
