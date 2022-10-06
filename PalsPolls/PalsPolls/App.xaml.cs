@@ -11,7 +11,7 @@ namespace PalsPolls
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new NavigationPage(new HomePage());
+            MainPage = new NavigationPage(new SignIn());
         }
 
         protected override void OnStart ()
