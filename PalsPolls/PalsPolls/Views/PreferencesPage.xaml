@@ -16,7 +16,7 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Username from Data Base*"
+                            <Label  x:Name="DisplayUN"
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="Black"/>
                         </StackLayout>
@@ -30,7 +30,7 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Phone # from Data Base*"
+                            <Label Text="{Binding PhoneNumber}"
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="Black"/>
                         </StackLayout>
@@ -44,9 +44,11 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Email from Data Base*"
+                            <Label Text="{Binding Email}"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Black"/>
+                                   TextColor="Black"
+
+                                   />
                         </StackLayout>
                     </ViewCell>
 

@@ -26,7 +26,8 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="1">
-                        <Entry Placeholder="Password"
+                        <Entry BindingContext="{x:Reference EntryUserEmail}"
+                               Placeholder="Password"
                                IsPassword="True"
                                FontSize="16"
                                x:Name="EntryUserPassword"/>

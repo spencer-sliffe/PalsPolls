@@ -10,35 +10,34 @@ namespace PalsPolls
 {
     public partial class RegisterPage : ContentPage
     {
+
+        private RegUserTable RegUser;
+
         public RegisterPage()
         {
             InitializeComponent();
         }
 
+
+
+
         //Function for account registration
-       void Handle_Clicked(object sender, System.EventArgs e)
+        async void Handle_Clicked(object sender, System.EventArgs e)
         {
             var email = EntryUserEmail.Text;
 
             var emailPattern = "^(?(\")(\".+?(?<!\\\\)\"@)|(([0-9a-z]((\\.(?!\\.))|[-!#\\$%&'\\*\\+/=\\?\\^`\\{\\}\\|~\\w])*)(?<=[0-9a-z])@))(?(\\[)(\\[(\\d{1,3}\\.){3}\\d{1,3}\\])|(([0-9a-z][-\\w]*[0-9a-z]*\\.)+[a-z0-9][\\-a-z0-9]{0,22}[a-z0-9]))$";
 
-            if (Regex.IsMatch(email, emailPattern))
+
+            if (string.IsNullOrWhiteSpace(EntryUserName.Text) || string.IsNullOrWhiteSpace(EntryUserPassword.Text) || string.IsNullOrWhiteSpace(EntryUserPhoneNumber.Text))
             {
-                var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db"); //Database path
-                var db = new SQLiteConnection(dbpath);
-                db.CreateTable<RegUserTable>();
+                await DisplayAlert("Error", "Must answer all fields", "Okay");
+            }
 
-                //new user
-                var item = new RegUserTable()
-                {
-                    UserName = EntryUserName.Text,
-                    Password = EntryUserPassword.Text,
-                    Email = EntryUserEmail.Text,
-                    PhoneNumber = EntryUserPhoneNumber.Text
-                };
+            else if (Regex.IsMatch(email, emailPattern))
+            {
+                AccountCreation();
 
-                //new database item
-                db.Insert(item);
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     var result = await this.DisplayAlert("Congratulations", "User Registration Successful", "Okay", "Cancel");
@@ -52,9 +51,33 @@ namespace PalsPolls
             {
                 ErrorLabel.Text = "Email is not valid";
             }
-            
+
 
         }
+
+        async void AccountCreation()
+        {
+            AddNewUser();
+            App.MyAccountTable(RegUser);
+            await Navigation.PopAsync();
+        }
+
+
+        async void AddNewUser()
+        {
+            await App.myDataBase.CreateLogin(RegUser = new Tables.RegUserTable
+            {
+                UserName = EntryUserName.Text,
+                Password = EntryUserPassword.Text,
+                Email = EntryUserEmail.Text,
+                PhoneNumber = EntryUserPhoneNumber.Text
+            });            
+
+            await Navigation.PopAsync();
+        }
+
+
+
     }
 }
 

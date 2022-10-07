@@ -19,9 +19,11 @@
     <None Remove="Views\" />
     <None Remove="sqlite-net-pcl" />
     <None Remove="Tables\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Tables\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>
