@@ -16,9 +16,10 @@ namespace PalsPolls.Views
             InitializeComponent();
         }
 
-        public void DisplayUserName()
+        async void DisplayUserName()
         {
             DisplayUN.Text = UserName();
+            await Navigation.PopAsync();
         }
 
         async void Button_Clicked(System.Object sender, System.EventArgs e)

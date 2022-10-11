@@ -16,43 +16,48 @@ namespace PalsPolls
 
         public static void MyAccountTable(RegUserTable RegUser)
         {
-            MyAccountAttributes = RegUser; 
+            MyAccountAttributes.UserId = RegUser.UserId;
+            MyAccountAttributes.UserName = RegUser.UserName;
+            MyAccountAttributes.Email = RegUser.Email;
+            MyAccountAttributes.Password = RegUser.Password;
+            MyAccountAttributes.PhoneNumber = RegUser.PhoneNumber;
         }
+    
 
-        public static DataBaseServices myDataBase
+    public static DataBaseServices myDataBase
+    {
+        get
         {
-            get
+            if (db == null)
             {
-                if (db == null)
-                {
-                    db = new DataBaseServices(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3"));
+                db = new DataBaseServices(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3"));
 
-                }
-                return db;
             }
-        }
-
-
-
-        public App()
-        {
-            InitializeComponent();
-
-            //MainPage = new MainPage();
-            MainPage = new NavigationPage(new SignIn());
-        }
-
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            return db;
         }
     }
+
+        public static object MyAccontTable { get; internal set; }
+
+        public App()
+    {
+        InitializeComponent();
+
+        //MainPage = new MainPage();
+        MainPage = new NavigationPage(new SignIn());
+    }
+
+    protected override void OnStart()
+    {
+    }
+
+    protected override void OnSleep()
+    {
+    }
+
+    protected override void OnResume()
+    {
+    }
+}
 }
 

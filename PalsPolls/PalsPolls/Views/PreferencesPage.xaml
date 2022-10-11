@@ -16,7 +16,7 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label  x:Name="DisplayUN"
+                            <Label x:Name="DisplayUN"
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="Black"/>
                         </StackLayout>
@@ -30,7 +30,7 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="{Binding PhoneNumber}"
+                            <Label 
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="Black"/>
                         </StackLayout>
@@ -44,7 +44,7 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="{Binding Email}"
+                            <Label 
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="Black"
 

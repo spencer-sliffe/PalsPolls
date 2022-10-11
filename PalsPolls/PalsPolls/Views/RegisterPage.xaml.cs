@@ -35,8 +35,8 @@ namespace PalsPolls
             }
 
             else if (Regex.IsMatch(email, emailPattern))
-            {
-                AccountCreation();
+            { 
+                AddNewUser();
 
                 Device.BeginInvokeOnMainThread(async () =>
                 {
@@ -55,12 +55,6 @@ namespace PalsPolls
 
         }
 
-        async void AccountCreation()
-        {
-            AddNewUser();
-            App.MyAccountTable(RegUser);
-            await Navigation.PopAsync();
-        }
 
 
         async void AddNewUser()
@@ -71,8 +65,8 @@ namespace PalsPolls
                 Password = EntryUserPassword.Text,
                 Email = EntryUserEmail.Text,
                 PhoneNumber = EntryUserPhoneNumber.Text
-            });            
-
+            });
+            App.MyAccountTable(RegUser);
             await Navigation.PopAsync();
         }
 
