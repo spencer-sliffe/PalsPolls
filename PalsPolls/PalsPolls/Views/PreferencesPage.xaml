@@ -56,13 +56,15 @@
                         </StackLayout>
                     </ViewCell>
 
-                     <ViewCell>
+                     <ViewCell Tapped = "ViewCell_Tapped">
+                        
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label Text="Change Password"
                                    TextColor="Red"
-                                   FontSize="16"/>
+                                   FontSize="16"
+                                   />
                         </StackLayout>
-
+                     
 
                     </ViewCell>
                      <ViewCell Tapped="ViewCell_Tapped_1">

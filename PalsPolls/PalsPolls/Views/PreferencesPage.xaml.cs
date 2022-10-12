@@ -31,6 +31,10 @@ namespace PalsPolls.Views
             await Navigation.PushAsync(new SignIn());
         }
 
+        async void ViewCell_Tapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new ChangePasswordPage(m_UserTable));
+        }
         async void ViewCell_Tapped_1(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new SignIn());
@@ -40,14 +44,14 @@ namespace PalsPolls.Views
         {
             return MyAccount.UserName;
         }
-        
+
         private String Email(RegUserTable MyAccount)
         {
             return MyAccount.Email;
         }
 
         private String PhoneNumber(RegUserTable MyAccount)
-        {            
+        {
             return MyAccount.PhoneNumber;
         }
     }
