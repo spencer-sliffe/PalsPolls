@@ -18,7 +18,8 @@
                                    VerticalTextAlignment="Center"/>
                             <Label x:Name="DisplayUN"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Black"/>
+                                   TextColor="Blue"
+                                   VerticalTextAlignment="Center"/>
                         </StackLayout>
                     </ViewCell>
                    
@@ -30,9 +31,11 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label 
+                            <Label x:Name="DisplayPN"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Black"/>
+                                   VerticalTextAlignment="Center"
+                                   TextColor="Blue"
+                                   FormattedText=""/>
                         </StackLayout>
                     </ViewCell>
 
@@ -43,11 +46,12 @@
                                    TextColor="Black"
                                    FontSize="20"
                                    WidthRequest="150"
-                                   VerticalTextAlignment="Center"/>
-                            <Label 
+                                   VerticalTextAlignment="Center"
+                                   />
+                            <Label x:Name="DisplayEM"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Black"
-
+                                   TextColor="Blue"
+                                   VerticalTextAlignment="Center"
                                    />
                         </StackLayout>
                     </ViewCell>
