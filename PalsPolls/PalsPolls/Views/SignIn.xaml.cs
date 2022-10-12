@@ -8,21 +8,29 @@ namespace PalsPolls
 {
     public partial class SignIn : ContentPage
     {
+        
         public SignIn()
         {
-            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
+            
         }
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db");
+            
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3");
             var db = new SQLiteConnection(dbpath);
             var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && u.Password.Equals(txtPassword.Text)).FirstOrDefault();
+            
+             
+            
 
             if (myquery != null)
             {
-                App.Current.MainPage = new NavigationPage(new HomePage());
+                
+                App.Current.MainPage = new NavigationPage(new HomePage(myquery));
+                
             }
             else
             {
@@ -44,6 +52,7 @@ namespace PalsPolls
         {
             await Navigation.PushAsync(new RegisterPage());
         }
+
     }
 }
 

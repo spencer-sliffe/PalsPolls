@@ -16,9 +16,10 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Username from Data Base*"
+                            <Label x:Name="DisplayUN"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Black"/>
+                                   TextColor="Blue"
+                                   VerticalTextAlignment="Center"/>
                         </StackLayout>
                     </ViewCell>
                    
@@ -30,9 +31,11 @@
                                    FontSize="20"
                                    WidthRequest="150"
                                    VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Phone # from Data Base*"
+                            <Label x:Name="DisplayPN"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Black"/>
+                                   VerticalTextAlignment="Center"
+                                   TextColor="Blue"
+                                   FormattedText=""/>
                         </StackLayout>
                     </ViewCell>
 
@@ -43,14 +46,17 @@
                                    TextColor="Black"
                                    FontSize="20"
                                    WidthRequest="150"
-                                   VerticalTextAlignment="Center"/>
-                            <Label Text="*Function to Get Email from Data Base*"
+                                   VerticalTextAlignment="Center"
+                                   />
+                            <Label x:Name="DisplayEM"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Black"/>
+                                   TextColor="Blue"
+                                   VerticalTextAlignment="Center"
+                                   />
                         </StackLayout>
                     </ViewCell>
 
-                     <ViewCell Tapped="ViewCell_Tapped">
+                     <ViewCell>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label Text="Change Password"
                                    TextColor="Red"
