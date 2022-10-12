@@ -16,18 +16,37 @@ namespace PalsPolls.Views
             m_UserTable = MyAccount;
         }
 
-        /*private String ChangePassword(RegUserTable MyAccount)
-        {
-            
-        }*/
-
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3");
+            var db = new SQLiteConnection(dbpath);
+            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && u.Password.Equals(txtPassword.Text)).FirstOrDefault();
+            if (myquery != null)
+            {               
+                App.myDataBase.UpdateUserPassword(newTxtPassword.Text, myquery);
+                App.Current.MainPage = new NavigationPage(new PreferencesPage(m_UserTable));
+
+            }
+            else
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var result = await this.DisplayAlert("Oops..", "Username or Password is incorrect!", "Okay", "Cancel");
+
+                    if (result)
+                        await Navigation.PushAsync(new ChangePasswordPage(m_UserTable));
+                    else
+                    {
+                        await Navigation.PushAsync(new ChangePasswordPage(m_UserTable));
+                    }
+                });
+            }
         }
 
-        void Button_Clicked_1(System.Object sender, System.EventArgs e)
-        {
-        }
+
+
+        
+
     }
 }
 

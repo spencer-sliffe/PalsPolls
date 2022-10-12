@@ -1,4 +1,6 @@
 ﻿using System;
+using SQLite;
+
 namespace PalsPolls.Tables
 {
     public class RegUserTable

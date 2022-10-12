@@ -17,10 +17,6 @@ namespace PalsPolls
         {
             InitializeComponent();
         }
-
-
-
-
         //Function for account registration
         async void Handle_Clicked(object sender, System.EventArgs e)
         {
@@ -51,11 +47,7 @@ namespace PalsPolls
             {
                 ErrorLabel.Text = "Email is not valid";
             }
-
-
         }
-
-
 
         async void AddNewUser()
         {
@@ -69,9 +61,6 @@ namespace PalsPolls
 
             await Navigation.PopAsync();
         }
-
-
-
     }
 }
 

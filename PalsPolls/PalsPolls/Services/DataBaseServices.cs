@@ -41,6 +41,11 @@ namespace PalsPolls.Services
             return db.DeleteAsync(regUser);
         }
 
+        public Task UpdateUserPassword(String m_password, RegUserTable regUser)
+        {
+            regUser.Password = m_password;
+            return db.UpdateAsync(regUser);
+        }
     }
 }
 
