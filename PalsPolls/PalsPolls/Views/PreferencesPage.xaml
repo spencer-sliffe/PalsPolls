@@ -52,7 +52,7 @@
                         </StackLayout>
                     </ViewCell>
 
-                     <ViewCell Tapped="ViewCell_Tapped">
+                     <ViewCell>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label Text="Change Password"
                                    TextColor="Red"

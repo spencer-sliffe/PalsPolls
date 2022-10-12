@@ -9,10 +9,10 @@ using System.Collections.Generic;
 namespace PalsPolls.Services
 {
     public class DataBaseServices
-    {
-        public RegUserTable publicRegUser = new RegUserTable();
+    {       
 
         private readonly SQLiteAsyncConnection db;
+     
 
         public DataBaseServices(string dbPath)
         {
@@ -20,10 +20,11 @@ namespace PalsPolls.Services
             db.CreateTableAsync<RegUserTable>();               
         }
 
-        public Task CreateLogin (RegUserTable regUser)
+        public Task CreateLogin(RegUserTable regUser)
         {
             return db.InsertAsync(regUser);
         }
+
 
         public Task<List<RegUserTable>> ReadUsers()
         {

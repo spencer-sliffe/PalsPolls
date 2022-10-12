@@ -11,19 +11,7 @@ namespace PalsPolls
     public partial class App : Application
     {
         private static DataBaseServices db;
-
-        public static RegUserTable MyAccountAttributes;
-
-        public static void MyAccountTable(RegUserTable RegUser)
-        {
-            MyAccountAttributes.UserId = RegUser.UserId;
-            MyAccountAttributes.UserName = RegUser.UserName;
-            MyAccountAttributes.Email = RegUser.Email;
-            MyAccountAttributes.Password = RegUser.Password;
-            MyAccountAttributes.PhoneNumber = RegUser.PhoneNumber;
-        }
-    
-
+        
     public static DataBaseServices myDataBase
     {
         get
@@ -37,9 +25,8 @@ namespace PalsPolls
         }
     }
 
-        public static object MyAccontTable { get; internal set; }
 
-        public App()
+    public App()
     {
         InitializeComponent();
 

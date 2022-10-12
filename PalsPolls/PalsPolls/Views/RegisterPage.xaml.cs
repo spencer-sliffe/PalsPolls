@@ -11,7 +11,7 @@ namespace PalsPolls
     public partial class RegisterPage : ContentPage
     {
 
-        private RegUserTable RegUser;
+        public RegUserTable regUser;
 
         public RegisterPage()
         {
@@ -59,14 +59,14 @@ namespace PalsPolls
 
         async void AddNewUser()
         {
-            await App.myDataBase.CreateLogin(RegUser = new Tables.RegUserTable
+            await App.myDataBase.CreateLogin(regUser = new Tables.RegUserTable
             {
                 UserName = EntryUserName.Text,
                 Password = EntryUserPassword.Text,
                 Email = EntryUserEmail.Text,
                 PhoneNumber = EntryUserPhoneNumber.Text
             });
-            App.MyAccountTable(RegUser);
+
             await Navigation.PopAsync();
         }
 
