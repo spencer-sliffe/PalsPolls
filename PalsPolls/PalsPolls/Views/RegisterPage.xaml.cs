@@ -31,7 +31,7 @@ namespace PalsPolls
             }
 
             else if (Regex.IsMatch(email, emailPattern))
-            { 
+            {
                 AddNewUser();
 
                 Device.BeginInvokeOnMainThread(async () =>
@@ -40,7 +40,6 @@ namespace PalsPolls
 
                     if (result)
                         await Navigation.PushAsync(new SignIn());
-
                 });
             }
             else

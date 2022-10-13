@@ -4,6 +4,7 @@ using System.IO;
 using PalsPolls.Tables;
 using SQLite;
 using Xamarin.Forms;
+
 namespace PalsPolls
 {
     public partial class SignIn : ContentPage
@@ -47,7 +48,6 @@ namespace PalsPolls
         {
             await Navigation.PushAsync(new RegisterPage());
         }
-
     }
 }
 

@@ -9,23 +9,35 @@ namespace PalsPolls.Views
 {
     public partial class ChangePasswordPage : ContentPage
     {
-        private readonly RegUserTable m_UserTable;
+        private readonly String m_Password;
+        public RegUserTable regUser;
+        private readonly RegUserTable m_regUser;
         public ChangePasswordPage(RegUserTable MyAccount)
         {
             InitializeComponent();
-            m_UserTable = MyAccount;
+            m_regUser = MyAccount;
+            regUser = MyAccount;
         }
 
-        void Button_Clicked(System.Object sender, System.EventArgs e)
+        async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3");
             var db = new SQLiteConnection(dbpath);
             var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && u.Password.Equals(txtPassword.Text)).FirstOrDefault();
-            if (myquery != null)
-            {               
-                App.myDataBase.UpdateUserPassword(newTxtPassword.Text, myquery);
-                App.Current.MainPage = new NavigationPage(new PreferencesPage(m_UserTable));
-
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text) || string.IsNullOrWhiteSpace(newTxtPassword.Text))
+            {
+                await DisplayAlert("Error", "Must answer all fields", "Okay");
+            }
+            else if (myquery != null)
+            {
+                regUser.Password = newTxtPassword.Text;
+                ChangePassword();
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var result = await this.DisplayAlert("Congratulations", "Password Changed", "Okay", "Cancel");
+                    if (result)
+                        await Navigation.PushAsync(new SignIn());
+                });
             }
             else
             {
@@ -34,19 +46,21 @@ namespace PalsPolls.Views
                     var result = await this.DisplayAlert("Oops..", "Username or Password is incorrect!", "Okay", "Cancel");
 
                     if (result)
-                        await Navigation.PushAsync(new ChangePasswordPage(m_UserTable));
+                        await Navigation.PushAsync(new ChangePasswordPage(m_regUser));
                     else
                     {
-                        await Navigation.PushAsync(new ChangePasswordPage(m_UserTable));
+                        await Navigation.PushAsync(new ChangePasswordPage(m_regUser));
                     }
                 });
             }
         }
 
-
-
-        
-
+        async void ChangePassword()
+        {
+            await App.myDataBase.UpdateUser(regUser);
+        }
     }
 }
+
+
 

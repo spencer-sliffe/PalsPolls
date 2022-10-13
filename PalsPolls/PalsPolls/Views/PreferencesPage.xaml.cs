@@ -32,12 +32,13 @@ namespace PalsPolls.Views
         }
 
         async void ViewCell_Tapped(System.Object sender, System.EventArgs e)
-        {
+        {            
             await Navigation.PushAsync(new ChangePasswordPage(m_UserTable));
         }
         async void ViewCell_Tapped_1(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new SignIn());
+            await Navigation.PopAsync();
         }
 
         private String UserName(RegUserTable MyAccount)

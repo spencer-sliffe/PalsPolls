@@ -9,22 +9,19 @@ using System.Collections.Generic;
 namespace PalsPolls.Services
 {
     public class DataBaseServices
-    {       
-
+    {
         private readonly SQLiteAsyncConnection db;
-     
 
         public DataBaseServices(string dbPath)
         {
             db = new SQLiteAsyncConnection(dbPath);
-            db.CreateTableAsync<RegUserTable>();               
+            db.CreateTableAsync<RegUserTable>();
         }
 
         public Task CreateLogin(RegUserTable regUser)
         {
             return db.InsertAsync(regUser);
         }
-
 
         public Task<List<RegUserTable>> ReadUsers()
         {
@@ -39,12 +36,6 @@ namespace PalsPolls.Services
         public Task DeleteUser(RegUserTable regUser)
         {
             return db.DeleteAsync(regUser);
-        }
-
-        public Task UpdateUserPassword(String m_password, RegUserTable regUser)
-        {
-            regUser.Password = m_password;
-            return db.UpdateAsync(regUser);
         }
     }
 }

@@ -14,8 +14,6 @@ namespace PalsPolls
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
             m_userTable = MyAccount;
-
-            
         }
 
         private async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
