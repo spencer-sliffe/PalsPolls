@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.SignIn"
-    BackgroundColor="White">
+    BackgroundColor="#CDD7DC">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -28,7 +28,8 @@
                         <Entry x:Name="txtUsername"
                                 Placeholder="Username"
                                 TextColor="Black"
-                                PlaceholderColor="Gray"/>
+                                PlaceholderColor="Black"
+                                BackgroundColor="Transparent"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="2">
@@ -36,7 +37,8 @@
                                 Placeholder="Password"
                                 IsPassword="True"
                                 TextColor="Black"
-                                PlaceholderColor="Gray"/>
+                                PlaceholderColor="Black"
+                                BackgroundColor="Transparent"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3">
@@ -44,9 +46,8 @@
                             VerticalOptions="Center"
                             Text="Login"              
                             TextColor="Black"
-                            BackgroundColor="Transparent"
+                            BackgroundColor="#315DA5"
                             BorderWidth="1.5"
-                            CornerRadius="50"
                             BorderColor="Transparent"
                             Clicked="Button_Clicked"/>
 
@@ -54,9 +55,9 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="Don't have an account? "
-                                            TextColor="Blue"/>
+                                            TextColor="#315DA5"/>
                                     <Span Text="Register"
-                                            TextColor="Blue"                     
+                                            TextColor="#315DA5"                     
                                             TextDecorations="Underline"/>
                                 </FormattedString>
                             </Label.FormattedText>

@@ -2,7 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PalsPolls.RegisterPage">
+    x:Class="PalsPolls.RegisterPage"
+    BackgroundColor="#CDD7DC">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -22,7 +23,8 @@
                         <Entry Placeholder="Username"
                                FontSize="16"
                                x:Name="EntryUserName"
-                               />
+                               BackgroundColor="Transparent"
+                               PlaceholderColor="black"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="1">
@@ -30,15 +32,19 @@
                                Placeholder="Password"
                                IsPassword="True"
                                FontSize="16"
-                               x:Name="EntryUserPassword"/>
+                               x:Name="EntryUserPassword"
+                               BackgroundColor="Transparent"
+                               PlaceholderColor="black"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3">
                         <Entry Placeholder="Email"
                                FontSize="16"
                                x:Name="EntryUserEmail"
-                               Keyboard="Email">
-                        </Entry>
+                               Keyboard="Email"
+                               BackgroundColor="Transparent"
+                               PlaceholderColor="black"/>
+
 
                         <Label x:Name="ErrorLabel"
                                HorizontalOptions="Center"
@@ -49,16 +55,18 @@
                         <Entry Placeholder="Phone Number"
                                FontSize="16"
                                x:Name="EntryUserPhoneNumber"
-                               Keyboard="Telephone"/>
+                               Keyboard="Telephone"
+                               BackgroundColor="Transparent"
+                               PlaceholderColor="Black"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="4">
                         <Button Text="Register"
                                 HorizontalOptions="CenterAndExpand"
                                 TextColor="White"
-                                BackgroundColor="Blue"
+                                BackgroundColor="#315DA5"
                                 WidthRequest="100"
-                                Clicked="Handle_Clicked"></Button>
+                                Clicked="Handle_Clicked"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>

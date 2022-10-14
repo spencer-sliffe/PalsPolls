@@ -9,7 +9,6 @@ namespace PalsPolls.Views
 {
     public partial class ChangePasswordPage : ContentPage
     {
-        private readonly String m_Password;
         public RegUserTable regUser;
         private readonly RegUserTable m_regUser;
         public ChangePasswordPage(RegUserTable MyAccount)

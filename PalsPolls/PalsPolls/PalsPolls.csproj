@@ -20,10 +20,14 @@
     <None Remove="sqlite-net-pcl" />
     <None Remove="Tables\" />
     <None Remove="Services\" />
+    <None Remove="Resources\" />
+    <None Remove="Resources\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Tables\" />
     <Folder Include="Services\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Fonts\" />
   </ItemGroup>
 </Project>

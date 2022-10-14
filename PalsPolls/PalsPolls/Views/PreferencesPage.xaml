@@ -18,7 +18,7 @@
                                    VerticalTextAlignment="Center"/>
                             <Label x:Name="DisplayUN"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Blue"
+                                   TextColor="#315DA5"
                                    VerticalTextAlignment="Center"/>
                         </StackLayout>
                     </ViewCell>
@@ -34,8 +34,7 @@
                             <Label x:Name="DisplayPN"
                                    HorizontalOptions="EndAndExpand"
                                    VerticalTextAlignment="Center"
-                                   TextColor="Blue"
-                                   FormattedText=""/>
+                                   TextColor="#315DA5"/>
                         </StackLayout>
                     </ViewCell>
 
@@ -46,13 +45,11 @@
                                    TextColor="Black"
                                    FontSize="20"
                                    WidthRequest="150"
-                                   VerticalTextAlignment="Center"
-                                   />
+                                   VerticalTextAlignment="Center"/>
                             <Label x:Name="DisplayEM"
                                    HorizontalOptions="EndAndExpand"
-                                   TextColor="Blue"
-                                   VerticalTextAlignment="Center"
-                                   />
+                                   TextColor="#315DA5"
+                                   VerticalTextAlignment="Center"/>
                         </StackLayout>
                     </ViewCell>
 
@@ -60,7 +57,7 @@
                         
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label Text="Change Password"
-                                   TextColor="Red"
+                                   TextColor="DarkRed"
                                    FontSize="16"
                                    />
                         </StackLayout>
@@ -70,7 +67,7 @@
                      <ViewCell Tapped="ViewCell_Tapped_1">
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label Text="Logout"
-                                   TextColor="blue"
+                                   TextColor="#315DA5"
                                    FontSize="16"/>
                         </StackLayout>
 

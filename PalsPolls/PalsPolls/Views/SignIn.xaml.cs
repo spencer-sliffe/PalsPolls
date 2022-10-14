@@ -9,7 +9,6 @@ namespace PalsPolls
 {
     public partial class SignIn : ContentPage
     {
-
         public SignIn()
         {
             InitializeComponent();
