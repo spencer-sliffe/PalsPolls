@@ -13,8 +13,7 @@ namespace PalsPolls
         {
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
-            m_userTable = MyAccount;
-            
+            m_userTable = MyAccount;            
         }
 
         private async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
@@ -24,6 +23,11 @@ namespace PalsPolls
         private async void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new PollCreatingPage(m_userTable));
+        }
+
+        private async void TapGestureRecognizer_Tapped_2(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new MyAccountPage(m_userTable));
         }
     }
 }

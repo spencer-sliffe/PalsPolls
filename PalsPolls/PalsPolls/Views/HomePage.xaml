@@ -12,6 +12,30 @@
                     x:Name="MainLayout"
                     Orientation="Vertical"
                     VerticalOptions="Center">
+                </StackLayout>
+                <StackLayout
+                    Orientation="Horizontal"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                              Property=Width,
+                                                              Factor=0.5,
+                                                              Constant=160}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                              Property=Height,
+                                                              Factor=1,
+                                                              Constant=-950}"
+                    VerticalOptions="Start">
+
+                    <Image Source="AccountIcon.png"
+                               HorizontalOptions="EndAndExpand"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent">
+                        <Image.GestureRecognizers>
+
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+
+                        </Image.GestureRecognizers>
+                    </Image>
 
                 </StackLayout>
                 <StackLayout

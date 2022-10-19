@@ -154,5 +154,6 @@
     <BundleResource Include="Resources\phone.png" />
     <BundleResource Include="Resources\Email.png" />
     <BundleResource Include="Resources\WriteAPoll.png" />
+    <BundleResource Include="Resources\AccountIcon.png" />
   </ItemGroup>
 </Project>
