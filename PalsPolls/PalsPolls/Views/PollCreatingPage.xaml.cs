@@ -46,7 +46,6 @@ namespace PalsPolls.Views
                 LeftNum = 0,
                 RightNum = 0
             });
-            await Navigation.PopAsync();
         }
     }
 }
