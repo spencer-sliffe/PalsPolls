@@ -6,13 +6,14 @@ using PalsPolls.Services;
 using PalsPolls.Views;
 using PalsPolls.Tables;
 
+
 namespace PalsPolls
 {
     public partial class App : Application
     {
         private static DataBaseServices db;
         private static PollServices db1;
-
+      
         public static PollServices myPollServices
         {
             get

@@ -6,6 +6,7 @@ namespace PalsPolls.Tables
     public class PollTable
     {
         [SQLite.PrimaryKey]
+        [SQLite.AutoIncrement]
         public Guid PostId { get; set; }
         public String PostUserName { get; set; }
         public String PostContent { get; set; }

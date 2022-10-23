@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using System.Data.SqlClient;
 
 namespace PalsPolls.iOS
 {
@@ -15,7 +16,9 @@ namespace PalsPolls.iOS
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
             UIApplication.Main(args, null, typeof(AppDelegate));
+
         }
+        //public Guid ClientConnectionId { get; }
     }
 }
 
