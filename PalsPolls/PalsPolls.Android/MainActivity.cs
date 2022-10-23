@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using System.Data.SqlClient;
 
 namespace PalsPolls.Droid
 {
@@ -24,6 +25,28 @@ namespace PalsPolls.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-        public Guid ClientConnectionId { get; }
+        //public Guid ClientConnectionId { get; }
+        //public System.Data.SqlClient.SqlConnection Connection { get; }
+        //public SqlConnection ();
+
+        /*private static void OpenSqlConnection()
+        {
+            string connectionString = GetConnectionString();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                Console.WriteLine("ServerVersion: {0}", connection.ServerVersion);
+                Console.WriteLine("State: {0}", connection.State);
+            }
+        }
+
+        static private string GetConnectionString()
+        {
+            // To avoid storing the connection string in your code,
+            // you can retrieve it from a configuration file, using the
+            // System.Configuration.ConfigurationManager.ConnectionStrings property
+            return "Data Source=(local);Initial Catalog=AdventureWorks;"
+                + "Integrated Security=SSPI;";
+        }*/
     }
 }
