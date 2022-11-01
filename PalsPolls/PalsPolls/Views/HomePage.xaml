@@ -1,17 +1,106 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
+        xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:local="clr-namespace:PalsPolls"
+        x:Class="PalsPolls.HomePage"
+        BackgroundColor="#CDD7DC"
+        Title="POLL INBOX">
+    <ContentPage.BindingContext>
+        <local:App x:Name="viewModel"/>
+
+    </ContentPage.BindingContext>
+
+
+    <syncfusion:SfListView
+                    x:Name="listView" 
+                    ItemSize="100"
+                    IsStickyFooter="True"
+                    FooterSize="70"
+                    SelectionBackgroundColor="#315DA5">
+        <syncfusion:SfListView.FooterTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="White" HeightRequest="45">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                        <ImageButton Source="WriteAPoll.png"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    Clicked="TapGestureRecognizer_Tapped_1"/>
+                    </Grid>
+                    <Grid Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                        <ImageButton Source="settings.png"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    Clicked="TapGestureRecognizer_Tapped"/>
+                    </Grid>
+                    <Grid Grid.Column="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                        <ImageButton Source="AccountIcon.png"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    Clicked="TapGestureRecognizer_Tapped_2"/>
+                    </Grid>
+                    <Grid Grid.Column="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                        <ImageButton Source="AddFriends.png"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    Clicked="ImageButton_Clicked"/>
+                    </Grid>
+                    <BoxView Grid.Column="0" BackgroundColor="White" />
+                    <BoxView Grid.Column="2" BackgroundColor="White" />
+                    <BoxView Grid.Column="4" BackgroundColor="White" />
+                    <BoxView Grid.Column="6" BackgroundColor="White" />
+                    <BoxView Grid.Column="8" BackgroundColor="White" />
+                </Grid>
+
+            </DataTemplate>
+        </syncfusion:SfListView.FooterTemplate>
+        <syncfusion:SfListView.LayoutManager>
+            <syncfusion:GridLayout SpanCount="1" />
+        </syncfusion:SfListView.LayoutManager>
+    </syncfusion:SfListView>
+
+</ContentPage>
+
+
+<!--
+<ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.HomePage"
     BackgroundColor="#CDD7DC"
     Title="Pal Polls">
+    
+</ContentPage>
+-->
+<!--
     <ContentPage.Content>
+
+
+
         <ScrollView>
+
             <RelativeLayout VerticalOptions="FillAndExpand">
                 <StackLayout
                     x:Name="MainLayout"
                     Orientation="Vertical"
                     VerticalOptions="Center">
+                    <Image Source="AccountIcon.png"/>
                 </StackLayout>
                 <StackLayout
                     Orientation="Horizontal"
@@ -91,5 +180,5 @@
         </ScrollView>
 
     </ContentPage.Content>
-</ContentPage>
+-->
 

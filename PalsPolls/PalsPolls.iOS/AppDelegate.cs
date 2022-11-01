@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Syncfusion.XForms.iOS.EffectsView;
 using Foundation;
 using UIKit;
+using Syncfusion.ListView.XForms.iOS;
 
 namespace PalsPolls.iOS
 {
@@ -23,6 +24,9 @@ namespace PalsPolls.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.Forms.Forms.Init();
+            SfListViewRenderer.Init();
+            SfEffectsViewRenderer.Init();  //Initialize only when effects view is added to Listview.
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

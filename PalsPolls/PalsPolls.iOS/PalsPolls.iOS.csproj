@@ -71,7 +71,6 @@
     <Compile Include="AppDelegate.designer.cs">
       <DependentUpon>AppDelegate.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqlConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -142,6 +141,12 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.8.116</Version>
     </PackageReference>
+    <PackageReference Include="MySqlConnector">
+      <Version>2.1.13</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>20.3.0.52</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -157,5 +162,6 @@
     <BundleResource Include="Resources\Email.png" />
     <BundleResource Include="Resources\WriteAPoll.png" />
     <BundleResource Include="Resources\AccountIcon.png" />
+    <BundleResource Include="Resources\AddFriends.png" />
   </ItemGroup>
 </Project>

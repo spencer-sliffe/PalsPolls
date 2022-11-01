@@ -57,7 +57,7 @@
                         
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label Text="Change Password"
-                                   TextColor="DarkRed"
+                                   TextColor="#315DA5"
                                    FontSize="16"
                                    />
                         </StackLayout>
@@ -67,7 +67,7 @@
                      <ViewCell Tapped="ViewCell_Tapped_1">
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label Text="Logout"
-                                   TextColor="#315DA5"
+                                   TextColor="DarkRed"
                                    FontSize="16"/>
                         </StackLayout>
 

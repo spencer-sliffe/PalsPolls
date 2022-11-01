@@ -42,9 +42,7 @@ namespace PalsPolls.Views
             await App.myPollServices.CreatePoll(m_poll = new Tables.PollTable
             {
                 PostUserName = m_userTable.UserName,
-                PostContent = EntryPoll.Text,
-                LeftNum = 0,
-                RightNum = 0
+                PostContent = EntryPoll.Text
             });
         }
     }

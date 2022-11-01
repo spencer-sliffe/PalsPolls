@@ -57,7 +57,6 @@ namespace PalsPolls
                 Email = EntryUserEmail.Text,
                 PhoneNumber = EntryUserPhoneNumber.Text
             });
-
             await Navigation.PopAsync();
         }
     }

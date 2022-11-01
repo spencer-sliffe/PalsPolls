@@ -6,13 +6,13 @@ using PalsPolls.Services;
 using PalsPolls.Views;
 using PalsPolls.Tables;
 
-
 namespace PalsPolls
 {
     public partial class App : Application
     {
         private static DataBaseServices db;
         private static PollServices db1;
+
       
         public static PollServices myPollServices
         {
@@ -20,7 +20,7 @@ namespace PalsPolls
             {
                 if (db1 == null)
                 {
-                    db1 = new PollServices(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PollDataBase.db3"));
+                    db1 = new PollServices(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Polls.db3"));
                 }
                 return db1;
             }
@@ -42,6 +42,7 @@ namespace PalsPolls
 
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NzQ5NDUzQDMyMzAyZTMzMmUzMGtlemQ5RXFZUXRNQkYvcFRYbitVUnRseDJqeXdabVdBUEFoeTlnNDdwc0U9");
             InitializeComponent();
 
             //MainPage = new MainPage();
