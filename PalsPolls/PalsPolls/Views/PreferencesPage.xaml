@@ -9,7 +9,7 @@
             <TableRoot>
                 <TableSection Title="Account">
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Padding="10,0,0,0">
                             <Image Source="icon.png"/>
                             <Label Text="Username:"
                                    TextColor="Black"
@@ -19,12 +19,14 @@
                             <Label x:Name="DisplayUN"
                                    HorizontalOptions="EndAndExpand"
                                    TextColor="#315DA5"
+                                   Padding="0,0,10,0"
                                    VerticalTextAlignment="Center"/>
+
                         </StackLayout>
                     </ViewCell>
                    
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Padding="10,0,0,0">
                             <Image Source="phone.png"/>
                             <Label Text="Phone #:"
                                    TextColor="Black"
@@ -33,13 +35,14 @@
                                    VerticalTextAlignment="Center"/>
                             <Label x:Name="DisplayPN"
                                    HorizontalOptions="EndAndExpand"
+                                   Padding="0,0,10,0"
                                    VerticalTextAlignment="Center"
                                    TextColor="#315DA5"/>
                         </StackLayout>
                     </ViewCell>
 
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Padding="10,0,0,0">
                             <Image Source="Email.png"/>
                             <Label Text="Email:"
                                    TextColor="Black"
@@ -48,6 +51,7 @@
                                    VerticalTextAlignment="Center"/>
                             <Label x:Name="DisplayEM"
                                    HorizontalOptions="EndAndExpand"
+                                   Padding="0,0,10,0"
                                    TextColor="#315DA5"
                                    VerticalTextAlignment="Center"/>
                         </StackLayout>

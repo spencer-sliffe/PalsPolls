@@ -21,7 +21,7 @@
                     SelectionBackgroundColor="#315DA5">
         <syncfusion:SfListView.FooterTemplate>
             <DataTemplate>
-                <Grid BackgroundColor="White" HeightRequest="45">
+                <Grid BackgroundColor="White" HeightRequest="55" Padding="0,0,0,15">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="20" />
                         <ColumnDefinition Width="*" />
@@ -40,7 +40,7 @@
                     HeightRequest="60"
                     Clicked="TapGestureRecognizer_Tapped_1"/>
                     </Grid>
-                    <Grid Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Grid Grid.Column="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                         <ImageButton Source="settings.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
@@ -54,7 +54,7 @@
                     HeightRequest="50"
                     Clicked="TapGestureRecognizer_Tapped_2"/>
                     </Grid>
-                    <Grid Grid.Column="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Grid Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                         <ImageButton Source="AddFriends.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
