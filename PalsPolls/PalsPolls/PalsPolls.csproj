@@ -27,6 +27,7 @@
     <None Remove="Npgsql" />
     <None Remove="MySqlConnector" />
     <None Remove="Syncfusion.Xamarin.SfListView" />
+    <None Remove="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -34,5 +35,6 @@
     <Folder Include="Services\" />
     <Folder Include="Resources\" />
     <Folder Include="Resources\Fonts\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>
