@@ -6,6 +6,8 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Common;
+using Xamarin.Essentials;
 
 namespace PalsPolls.Services
 {
@@ -19,16 +21,15 @@ namespace PalsPolls.Services
             db1.CreateTableAsync<PollTable>();
         }
 
-        public Task CreatePoll(PollTable m_poll)
+        public async Task CreatePoll(PollTable m_poll)
         {
-            return db1.InsertAsync(m_poll);
+            await db1.InsertAsync(m_poll);
         }
 
-        public Task<List<PollTable>> ReadPosts()
+        public async Task<IEnumerable<PollTable>> ReadPosts()
         {
-            return db1.Table<PollTable>().ToListAsync();          
-            
-        }       
+            return await db1.Table<PollTable>().ToListAsync();
+        }
 
         public Task DeletePost(PollTable m_Table)
         {

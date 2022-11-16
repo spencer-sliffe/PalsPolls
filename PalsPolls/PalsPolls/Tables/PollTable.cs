@@ -9,12 +9,13 @@ namespace PalsPolls.Tables
 
     public class PollTable
     {
-        public PollTable() { }
         [SQLite.PrimaryKey]
         [SQLite.AutoIncrement]
         public Guid PostId { get; set; }
         public String PostUserName { get; set; }
         public String PostContent { get; set; }
+        public String PostContent1 { get; set; }
+        public String PostContent2 { get; set; }
     }
 
 }

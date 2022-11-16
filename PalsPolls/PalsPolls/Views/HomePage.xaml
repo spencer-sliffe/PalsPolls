@@ -1,21 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
+<ContentPage 
         xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
         xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns:local="clr-namespace:PalsPolls"
+        xmlns:local="clr-namespace:PalsPolls" xmlns:viewmodels="clr-namespace:PalsPolls.ViewModels" x:DataType="viewmodels:HomePageViewModel" 
         x:Class="PalsPolls.HomePage"
         BackgroundColor="#CDD7DC"
         Title="POLL INBOX">
-    <ContentPage.BindingContext>
-        <local:App x:Name="viewModel"/>
-
-    </ContentPage.BindingContext>
-
-
+    
     <syncfusion:SfListView
-                    x:Name="listView" 
-                    ItemSize="100"
+                    ItemsSource= "{Binding ItemTemplate}"
+                    BindingContext= "{Binding LoadDataCommand}"
                     IsStickyFooter="True"
                     FooterSize="70"
                     SelectionBackgroundColor="#315DA5">
@@ -67,12 +62,12 @@
                     <BoxView Grid.Column="6" BackgroundColor="White" />
                     <BoxView Grid.Column="8" BackgroundColor="White" />
                 </Grid>
-
             </DataTemplate>
         </syncfusion:SfListView.FooterTemplate>
         <syncfusion:SfListView.LayoutManager>
             <syncfusion:GridLayout SpanCount="1" />
         </syncfusion:SfListView.LayoutManager>
+
     </syncfusion:SfListView>
 
 </ContentPage>

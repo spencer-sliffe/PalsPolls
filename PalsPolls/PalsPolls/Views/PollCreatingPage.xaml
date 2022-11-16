@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:PalsPolls.ViewModels" x:DataType="viewmodels:PollCreatingPageViewModel"
     x:Class="PalsPolls.Views.PollCreatingPage"
     BackgroundColor="#CDD7DC"
     >
@@ -61,7 +61,8 @@
                                 TextColor="White"
                                 BackgroundColor="#315DA5"
                                 WidthRequest="100"
-                                Clicked="Handle_Clicked"/>
+                                Clicked="Handle_Clicked"
+                                Command="{Binding PostCommand}"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>
