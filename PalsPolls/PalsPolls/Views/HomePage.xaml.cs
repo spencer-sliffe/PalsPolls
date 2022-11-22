@@ -13,7 +13,7 @@ namespace PalsPolls
 
         public HomePage(RegUserTable MyAccount)
         {
-            //ViewModel = new HomePageViewModel();
+            
             InitializeComponent();
             m_userTable = MyAccount;
             
@@ -25,7 +25,7 @@ namespace PalsPolls
         }
         private async void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new PollCreatingPage(new PollTableViewModel()));
+            await Navigation.PushAsync(new PollCreatingPage(new PollTableViewModel(), m_userTable));
         }
 
         private async void TapGestureRecognizer_Tapped_2(System.Object sender, System.EventArgs e)

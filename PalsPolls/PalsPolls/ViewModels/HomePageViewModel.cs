@@ -21,9 +21,6 @@ namespace PalsPolls.ViewModels
 
         public ICommand LoadDataCommand { get; private set; }
 
-        
-
-
         private async Task LoadData()
         {
             if (_isDataLoaded)
@@ -35,7 +32,7 @@ namespace PalsPolls.ViewModels
                 PollTables.Add(new PollTableViewModel(polltable));
 
 
-            SfListView listView = new SfListView
+            /*SfListView listView = new SfListView
             {
                 ItemsSource = PollTables,
                 ItemTemplate = new DataTemplate(() =>
@@ -64,12 +61,13 @@ namespace PalsPolls.ViewModels
                     };
                 })
 
-            };
+            };*/
         }
 
         public HomePageViewModel()
         {
-            LoadDataCommand = new Command(async () => await LoadData());
+            
+            Task.Run(async () => await LoadData());
             MessagingCenter.Subscribe<PollCreatingPageViewModel, PollTable>
                 (this, Events.PollTableAdded, OnPollCreated);
         }

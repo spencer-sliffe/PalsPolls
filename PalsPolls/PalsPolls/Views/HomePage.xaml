@@ -7,12 +7,19 @@
         x:Class="PalsPolls.HomePage"
         BackgroundColor="#CDD7DC"
         Title="POLL INBOX">
+
     
+<ContentPage.BindingContext>
+
+    <viewmodels:HomePageViewModel x:Name="vm" />
+
+</ContentPage.BindingContext>
+
     <syncfusion:SfListView
-                    ItemsSource= "{Binding ItemTemplate}"
-                    BindingContext= "{Binding LoadDataCommand}"
+                    ItemsSource= "{Binding PollTables}"
                     IsStickyFooter="True"
                     FooterSize="70"
+                    ItemSize="100"
                     SelectionBackgroundColor="#315DA5">
         <syncfusion:SfListView.FooterTemplate>
             <DataTemplate>
@@ -67,7 +74,23 @@
         <syncfusion:SfListView.LayoutManager>
             <syncfusion:GridLayout SpanCount="1" />
         </syncfusion:SfListView.LayoutManager>
+        <syncfusion:SfListView.ItemTemplate>
 
+            <DataTemplate x:DataType="viewmodels:PollTableViewModel" >
+
+                <StackLayout>
+
+                    <Label Text="{Binding PostContent}"/>
+
+                    <Label Text="{Binding PostContent1}"/>
+
+                    <Label Text="{Binding PostContent2}"/>
+
+                </StackLayout>
+
+            </DataTemplate>
+
+        </syncfusion:SfListView.ItemTemplate>
     </syncfusion:SfListView>
 
 </ContentPage>

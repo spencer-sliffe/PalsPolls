@@ -62,7 +62,7 @@
                                 BackgroundColor="#315DA5"
                                 WidthRequest="100"
                                 Clicked="Handle_Clicked"
-                                Command="{Binding PostCommand}"/>
+                                />
                     </StackLayout>
                 </Grid>
             </StackLayout>
