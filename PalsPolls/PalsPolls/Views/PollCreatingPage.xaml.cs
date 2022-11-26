@@ -30,14 +30,16 @@ namespace PalsPolls.Views
                 await DisplayAlert("Error", "Must answer all fields", "Okay");
             }
             else
-            {
-                AddNewPost();
+            {              
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     var result = await this.DisplayAlert("Success", "New Post Created", "Okay", "Cancel");
 
                     if (result)
-                        await Navigation.PushAsync(new HomePage(m_userTable)); ;
+                    {
+                        AddNewPost();
+                        await Navigation.PushAsync(new HomePage(m_userTable));
+                    }
                 });
             }
            
@@ -48,7 +50,7 @@ namespace PalsPolls.Views
         {
             await App.myPollServices.CreatePoll(m_poll = new Tables.PollTable
             {
-                PostUserName = "to be implemented",
+                PostUserName = m_userTable.UserName,
                 PostContent = EntryPoll.Text,
                 PostContent1 = EntryAnswer1.Text,
                 PostContent2 = EntryAnswer2.Text

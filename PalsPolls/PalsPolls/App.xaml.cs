@@ -20,7 +20,7 @@ namespace PalsPolls
             {
                 if (db1 == null)
                 {
-                    db1 = new PollServices(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Polls.db3"));
+                    db1 = new PollServices(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "OfficialPolls.db3"));
                 }
                 return db1;
             }

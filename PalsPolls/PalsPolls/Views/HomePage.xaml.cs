@@ -16,7 +16,7 @@ namespace PalsPolls
             
             InitializeComponent();
             m_userTable = MyAccount;
-            
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
         }
 
         private async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
@@ -38,6 +38,9 @@ namespace PalsPolls
             await Navigation.PushAsync(new FriendsPage());
         }
 
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }
 

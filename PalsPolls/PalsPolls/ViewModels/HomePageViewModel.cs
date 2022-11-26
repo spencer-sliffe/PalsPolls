@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using PalsPolls.Tables;
@@ -28,8 +29,8 @@ namespace PalsPolls.ViewModels
 
             _isDataLoaded = true;
             var polltables = await App.myPollServices.ReadPosts();
-            foreach (var polltable in polltables)
-                PollTables.Add(new PollTableViewModel(polltable));
+            foreach (var polltable in polltables.Reverse())
+                PollTables.Add(new PollTableViewModel(polltable));              
 
 
             /*SfListView listView = new SfListView

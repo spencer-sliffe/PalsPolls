@@ -165,5 +165,10 @@
     <BundleResource Include="Resources\WriteAPoll.png" />
     <BundleResource Include="Resources\AccountIcon.png" />
     <BundleResource Include="Resources\AddFriends.png" />
+    <BundleResource Include="Resources\iconizer-AccountIcon_1.png" />
+    <BundleResource Include="Resources\iconizer-AddFriends_1.png" />
+    <BundleResource Include="Resources\iconizer-Email.png" />
+    <BundleResource Include="Resources\iconizer-settings-2.png" />
+    <BundleResource Include="Resources\iconizer-WriteAPoll.png" />
   </ItemGroup>
 </Project>

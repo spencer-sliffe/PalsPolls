@@ -18,6 +18,7 @@ namespace PalsPolls.ViewModels
             _content = polltable.PostContent;
             _content1 = polltable.PostContent1;
             _content2 = polltable.PostContent2;
+            _createdDate = polltable.CreatedDate;
         }
 
         private string _postUserName;
@@ -69,9 +70,22 @@ namespace PalsPolls.ViewModels
             }
         }
 
+        private DateTime _createdDate;
+
+        public DateTime CreatedDate
+        {
+            get { return _createdDate; }
+            set
+            {
+                SetValue(ref _createdDate, value);
+                OnPropertyChanged(nameof(PollTable));
+            }
+        }
+
+
         public string PollTable
         {
-            get { return $"{PostContent} {PostContent1} {PostContent2}"; }
+            get { return $"{PostContent} {PostContent1} {PostContent2} {CreatedDate}"; }
         }
     }
 }

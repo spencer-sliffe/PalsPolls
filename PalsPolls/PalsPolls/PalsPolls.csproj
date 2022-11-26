@@ -28,6 +28,11 @@
     <None Remove="MySqlConnector" />
     <None Remove="Syncfusion.Xamarin.SfListView" />
     <None Remove="ViewModels\" />
+    <None Remove="Resources\Fonts\blackjack.otf" />
+    <None Remove="Resources\Fonts\MountainsofChristmas.ttf" />
+    <None Remove="Resources\Fonts\Caudex-Bold.ttf" />
+    <None Remove="Resources\Fonts\Caudex-Regular.ttf" />
+    <None Remove="Resources\Fonts\Exo-VariableFont_wght.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -36,5 +41,12 @@
     <Folder Include="Resources\" />
     <Folder Include="Resources\Fonts\" />
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\blackjack.otf" />
+    <EmbeddedResource Include="Resources\Fonts\MountainsofChristmas.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Caudex-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Caudex-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Exo-VariableFont_wght.ttf" />
   </ItemGroup>
 </Project>

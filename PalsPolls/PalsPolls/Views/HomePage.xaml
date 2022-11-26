@@ -5,7 +5,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:local="clr-namespace:PalsPolls" xmlns:viewmodels="clr-namespace:PalsPolls.ViewModels" x:DataType="viewmodels:HomePageViewModel" 
         x:Class="PalsPolls.HomePage"
-        BackgroundColor="#CDD7DC"
+        BackgroundColor="#050A30"
         Title="POLL INBOX">
 
     
@@ -18,12 +18,15 @@
     <syncfusion:SfListView
                     ItemsSource= "{Binding PollTables}"
                     IsStickyFooter="True"
+                    IsStickyHeader="True"
                     FooterSize="70"
-                    ItemSize="100"
-                    SelectionBackgroundColor="#315DA5">
+                    HeaderSize="100"                   
+                    ItemSize="150"
+                    SelectionBackgroundColor="#050A30"
+                    >        
         <syncfusion:SfListView.FooterTemplate>
             <DataTemplate>
-                <Grid BackgroundColor="White" HeightRequest="55" Padding="0,0,0,15">
+                <Grid BackgroundColor="#050A30" HeightRequest="55" Padding="0,0,0,15">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="20" />
                         <ColumnDefinition Width="*" />
@@ -36,57 +39,72 @@
                         <ColumnDefinition Width="20" />
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="WriteAPoll.png"
+                        <ImageButton Source="iconizer-WriteAPoll.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
                     HeightRequest="60"
                     Clicked="TapGestureRecognizer_Tapped_1"/>
                     </Grid>
                     <Grid Grid.Column="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="settings.png"
+                        <ImageButton Source="iconizer-settings-2.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
                     HeightRequest="60"
                     Clicked="TapGestureRecognizer_Tapped"/>
                     </Grid>
                     <Grid Grid.Column="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="AccountIcon.png"
+                        <ImageButton Source="iconizer-AccountIcon_1.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="50"
                     HeightRequest="50"
                     Clicked="TapGestureRecognizer_Tapped_2"/>
                     </Grid>
                     <Grid Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="AddFriends.png"
+                        <ImageButton Source="iconizer-AddFriends_1.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
                     HeightRequest="60"
                     Clicked="ImageButton_Clicked"/>
                     </Grid>
-                    <BoxView Grid.Column="0" BackgroundColor="White" />
-                    <BoxView Grid.Column="2" BackgroundColor="White" />
-                    <BoxView Grid.Column="4" BackgroundColor="White" />
-                    <BoxView Grid.Column="6" BackgroundColor="White" />
-                    <BoxView Grid.Column="8" BackgroundColor="White" />
+                    <BoxView Grid.Column="0" BackgroundColor="#050A30" />
+                    <BoxView Grid.Column="2" BackgroundColor="#050A30" />
+                    <BoxView Grid.Column="4" BackgroundColor="#050A30" />
+                    <BoxView Grid.Column="6" BackgroundColor="#050A30" />
+                    <BoxView Grid.Column="8" BackgroundColor="#050A30" />
                 </Grid>
             </DataTemplate>
         </syncfusion:SfListView.FooterTemplate>
+        <syncfusion:SfListView.HeaderTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#050A30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End">
+                        <Label Text="Pals Polls" FontFamily="Cursive" FontSize="31" TextColor="#7EC8E3"/>
+
+                    </Grid>
+                </Grid>
+            </DataTemplate>
+        </syncfusion:SfListView.HeaderTemplate>
         <syncfusion:SfListView.LayoutManager>
             <syncfusion:GridLayout SpanCount="1" />
         </syncfusion:SfListView.LayoutManager>
         <syncfusion:SfListView.ItemTemplate>
 
             <DataTemplate x:DataType="viewmodels:PollTableViewModel" >
-
-                <StackLayout>
-
-                    <Label Text="{Binding PostContent}"/>
-
-                    <Label Text="{Binding PostContent1}"/>
-
-                    <Label Text="{Binding PostContent2}"/>
-
-                </StackLayout>
+                <Grid Padding="2" Margin="2" >                   
+                        <Frame x:Name="frame" HasShadow="True" Padding="2" Margin="2" BackgroundColor="#7EC8E3">
+                            <StackLayout>
+                                <Grid>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding PostUserName}" FontSize="18" FontFamily="Exo" HorizontalOptions="Start" TextColor="#050A30"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding CreatedDate}" FontSize="18" FontFamily="Exo" HorizontalOptions="End" TextColor="#050A30"/>
+                                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding PostContent}" FontSize="35" FontFamily="Exo" HorizontalOptions="Center" TextColor="#000C66"/>
+                                    <Button Grid.Row="2" Grid.Column="0" Text="{Binding PostContent1}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" FontAttributes="Bold"/>
+                                    <Button Grid.Row="2" Grid.Column="1" Text="{Binding PostContent2}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" FontAttributes="Bold"/>
+                                </Grid>
+                                
+                                
+                           </StackLayout>
+                        </Frame>
+                </Grid>
 
             </DataTemplate>
 

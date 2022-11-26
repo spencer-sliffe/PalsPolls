@@ -26,7 +26,8 @@ namespace PalsPolls.ViewModels
                 PostUserName = viewModel.PostUserName,
                 PostContent = viewModel.PostContent,
                 PostContent1 = viewModel.PostContent1,
-                PostContent2 = viewModel.PostContent2
+                PostContent2 = viewModel.PostContent2,
+                CreatedDate = viewModel.CreatedDate,
             };
 
             async Task Post()
