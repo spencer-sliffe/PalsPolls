@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.RegisterPage"
-    BackgroundColor="#CDD7DC">
+    BackgroundColor="#050A30">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -17,56 +17,76 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>                
 
                     <StackLayout Grid.Row="0">
-                        <Entry Placeholder="Username"
-                               FontSize="16"
-                               x:Name="EntryUserName"
-                               BackgroundColor="Transparent"
-                               PlaceholderColor="black"/>
+                        <Label Text="Pals Polls"
+                               FontFamily="Cursive"
+                               TextColor="#7EC8E3"
+                               FontSize="40"
+                               HorizontalOptions="Center"/>
+
                     </StackLayout>
 
                     <StackLayout Grid.Row="1">
+                        <Entry Placeholder="Username"
+                               FontSize="16"
+                               x:Name="EntryUserName"
+                               BackgroundColor="#7EC8E3"
+                               PlaceholderColor="#050A30"
+                               FontFamily="Exo"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2">
                         <Entry BindingContext="{x:Reference EntryUserEmail}"
                                Placeholder="Password"
                                IsPassword="True"
                                FontSize="16"
                                x:Name="EntryUserPassword"
-                               BackgroundColor="Transparent"
-                               PlaceholderColor="black"/>
+                               BackgroundColor="#7EC8E3"
+                               PlaceholderColor="#050A30"
+                               FontFamily="Exo"/>
                     </StackLayout>
 
-                    <StackLayout Grid.Row="3">
+                    <StackLayout Grid.Row="4">
                         <Entry Placeholder="Email"
                                FontSize="16"
                                x:Name="EntryUserEmail"
                                Keyboard="Email"
-                               BackgroundColor="Transparent"
-                               PlaceholderColor="black"/>
+                               BackgroundColor="#7EC8E3"
+                               PlaceholderColor="#050A30"
+                               FontFamily="Exo"/>
 
 
                         <Label x:Name="ErrorLabel"
                                HorizontalOptions="Center"
-                               TextColor="DarkRed"/>  
+                               TextColor="#050A30"
+                               BackgroundColor="#7EC8E3"
+                               FontFamily="Exo"/>  
                     </StackLayout>
 
-                    <StackLayout Grid.Row="2">
+                    <StackLayout Grid.Row="3">
                         <Entry Placeholder="Phone Number"
                                FontSize="16"
                                x:Name="EntryUserPhoneNumber"
                                Keyboard="Telephone"
-                               BackgroundColor="Transparent"
-                               PlaceholderColor="Black"/>
+                               BackgroundColor="#7EC8E3"
+                               PlaceholderColor="#050A30"
+                               FontFamily="Exo"/>
                     </StackLayout>
 
-                    <StackLayout Grid.Row="4">
+                    <StackLayout Grid.Row="5">
                         <Button Text="Register"
                                 HorizontalOptions="CenterAndExpand"
-                                TextColor="White"
-                                BackgroundColor="#315DA5"
+                                TextColor="#7EC8E3"
+                                FontSize="20"
+                                BorderColor="#7EC8E3"
+                                BorderWidth="1"
+                                BackgroundColor="Transparent"
                                 WidthRequest="100"
-                                Clicked="Handle_Clicked"/>
+                                Clicked="Handle_Clicked"
+                                FontFamily="Exo"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>

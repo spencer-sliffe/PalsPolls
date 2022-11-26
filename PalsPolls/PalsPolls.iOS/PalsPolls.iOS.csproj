@@ -170,5 +170,6 @@
     <BundleResource Include="Resources\iconizer-Email.png" />
     <BundleResource Include="Resources\iconizer-settings-2.png" />
     <BundleResource Include="Resources\iconizer-WriteAPoll.png" />
+    <BundleResource Include="Resources\iconizer-icon.png" />
   </ItemGroup>
 </Project>
