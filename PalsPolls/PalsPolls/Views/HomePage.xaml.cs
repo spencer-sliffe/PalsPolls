@@ -41,6 +41,10 @@ namespace PalsPolls
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
         }
+
+        void Button_Clicked_1(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }
 
