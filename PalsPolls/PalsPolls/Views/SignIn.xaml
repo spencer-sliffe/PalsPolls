@@ -48,20 +48,20 @@
                         <Button
                             VerticalOptions="Center"
                             Text="Login"
-                            TextColor="#7EC8E3"
+                            TextColor="#00137E"
                             Clicked="Button_Clicked"
                             FontFamily="Exo"
-                            BorderColor="#7EC8E3"
+                            BorderColor="#00137E"
                             BorderWidth="1"/>
 
                         <Label HorizontalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="Don't have an account? "
-                                            TextColor="#7EC8E3"
+                                            TextColor="#00137E"
                                             FontFamily="Exo"/>
                                     <Span Text="Register"
-                                            TextColor="#7EC8E3"                                                                 
+                                            TextColor="#00137E"                                                                 
                                             FontFamily="Exo"/>
                                 </FormattedString>
                             </Label.FormattedText>

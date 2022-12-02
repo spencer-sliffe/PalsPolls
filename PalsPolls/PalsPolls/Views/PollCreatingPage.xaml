@@ -25,7 +25,7 @@
 
                     <StackLayout Grid.Row="0" Grid.ColumnSpan="3">
                         <Label Text="Write a Poll for your Friends!"
-                               TextColor="#7EC8E3"
+                               TextColor="#00137E"
                                FontSize="27"
                                VerticalOptions="Center"
                                FontFamily="Exo"
@@ -37,7 +37,7 @@
                                FontSize="16"
                                x:Name="EntryPoll"
                                BackgroundColor="#7EC8E3"
-                               PlaceholderColor="#FFFBE0"
+                               PlaceholderColor="#00137E"
                                VerticalOptions="FillAndExpand"
                                VerticalTextAlignment="Start"
                                FontFamily="Exo"/>
@@ -48,7 +48,7 @@
                                FontSize="16"
                                x:Name="EntryAnswer1"
                                BackgroundColor="#7EC8E3"
-                               PlaceholderColor="#FFFBE0"
+                               PlaceholderColor="#00137E"
                                FontFamily="Exo"/>
                     </StackLayout>
                     <StackLayout Grid.Row="2" Grid.Column="1">
@@ -56,14 +56,14 @@
                                FontSize="16"
                                x:Name="EntryAnswer2"
                                BackgroundColor="#7EC8E3"
-                               PlaceholderColor="#FFFBE0"
+                               PlaceholderColor="#00137E"
                                FontFamily="Exo"/>
                     </StackLayout>
 
                     <StackLayout Grid.Row="3" Grid.ColumnSpan="2">
                         <Button Text="Post"
                                 HorizontalOptions="CenterAndExpand"
-                                TextColor="#FFFBE0"
+                                TextColor="#00137E"
                                 BackgroundColor="#7EC8E3"
                                 WidthRequest="100"
                                 Clicked="Handle_Clicked"
