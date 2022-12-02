@@ -53,7 +53,7 @@ namespace PalsPolls
             await App.myDataBase.CreateLogin(regUser = new Tables.RegUserTable
             {
                 UserName = EntryUserName.Text,
-                Password = EntryUserPassword.Text,
+                Password = App.myDataBase.HashPass(EntryUserPassword.Text),
                 Email = EntryUserEmail.Text,
                 PhoneNumber = EntryUserPhoneNumber.Text
             });

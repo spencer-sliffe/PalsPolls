@@ -5,6 +5,8 @@ using PalsPolls.Views;
 using System.IO;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace PalsPolls.Services
 {
@@ -16,7 +18,17 @@ namespace PalsPolls.Services
         {
             db = new SQLiteAsyncConnection(dbPath);
             db.CreateTableAsync<RegUserTable>();
+            
         }
+
+        public String HashPass(String password)
+        {
+            var sha = SHA256.Create();
+            var asByteArray = Encoding.Default.GetBytes(password);
+            var hashedPassword = sha.ComputeHash(asByteArray);
+            return Convert.ToBase64String(hashedPassword);
+        }
+
 
         public Task CreateLogin(RegUserTable regUser)
         {
