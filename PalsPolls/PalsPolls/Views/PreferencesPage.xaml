@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.Views.PreferencesPage"
     Title="Settings"
-    BackgroundColor="#FFF9E9">
+    BackgroundColor="#7EC8E3">
     <ContentPage.Content>
        <TableView Intent="Settings">
             <TableRoot>
