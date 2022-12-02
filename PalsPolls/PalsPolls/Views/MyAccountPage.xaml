@@ -1,17 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-<<<<<<< Updated upstream
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="PalsPolls.Views.MyAccountPage"
-    BackgroundColor="#CDD7DC"
-    Title="Account Page">
-    <ContentPage.Content>
-        <ScrollView />
-    </ContentPage.Content>
-</ContentPage>
-=======
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:PalsPolls.ViewModels" xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" x:DataType="viewmodels:MyAccountPageViewModel" 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:PalsPolls.ViewModels" x:DataType="viewmodels:MyAccountPageViewModel" 
     x:Class="PalsPolls.MyAccountPage"
     Title="Account Page"
     BackgroundColor="#050A30"
@@ -39,10 +29,9 @@
                         <Button Text="&lt;HOMEPAGE" FontFamily="Exo" FontSize="20" TextColor="#7EC8E3" Clicked="Button_Clicked"/>
                     </Grid>
                     <Grid Grid.ColumnSpan="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End">
-                        <Label Text="Your Polls" FontFamily="Cursive" FontSize="31" TextColor="#7EC8E3"/>
->>>>>>> Stashed changes
-
-                    </Grid>
+     
+                           <Label Text="Your Polls" FontFamily="Cursive" FontSize="31" TextColor="#7EC8E3"/>
+            </Grid>
               
                 </Grid>
             </DataTemplate>
