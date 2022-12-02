@@ -1,15 +1,19 @@
 ﻿using System;
 using PalsPolls.Tables;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace PalsPolls.ViewModels
 {
     public class PollTableViewModel : BaseViewModel
     {
         public Guid PostId { get; set; }
+
         public PollTableViewModel()
         {
+
         }
+
 
         public PollTableViewModel(PollTable polltable)
         {
@@ -81,7 +85,6 @@ namespace PalsPolls.ViewModels
                 OnPropertyChanged(nameof(PollTable));
             }
         }
-
 
         public string PollTable
         {
