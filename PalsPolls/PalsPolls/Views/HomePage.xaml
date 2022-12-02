@@ -97,14 +97,8 @@
                                     <Label Grid.Row="0" Grid.Column="0" Text="{Binding PostUserName}" FontSize="18" FontFamily="Exo" HorizontalOptions="Start" TextColor="#050A30"/>
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding CreatedDate}" FontSize="18" FontFamily="Exo" HorizontalOptions="End" TextColor="#050A30"/>
                                     <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding PostContent}" FontSize="35" FontFamily="Exo" HorizontalOptions="Center" TextColor="#000C66"/>
-<<<<<<< Updated upstream
                                     <Button Grid.Row="2" Grid.Column="0" Text="{Binding PostContent1}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" Clicked="Button_Clicked"/>
                                     <Button Grid.Row="2" Grid.Column="1" Text="{Binding PostContent2}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" Clicked="Button_Clicked"/>
-=======
-                                    <Button x:Name="ButtonOption1" Grid.Row="2" Grid.Column="0" Text="{Binding PostContent1}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF"></Button>
-                                    <Button x:Name="ButtonOption2" Grid.Row="2" Grid.Column="1" Text="{Binding PostContent2}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" />
-                                    
->>>>>>> Stashed changes
                                 </Grid>
                                 
                                 

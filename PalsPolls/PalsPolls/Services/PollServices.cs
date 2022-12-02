@@ -31,9 +31,9 @@ namespace PalsPolls.Services
             return await db1.Table<PollTable>().ToListAsync();
         }
 
-        public async Task DeletePost(PollTable m_Table)
+        public Task DeletePost(PollTable m_Table)
         {
-            await db1.DeleteAsync(m_Table);
+            return db1.DeleteAsync(m_Table);
         }
 
         public async Task<ObservableCollection<PollTable>> Init()

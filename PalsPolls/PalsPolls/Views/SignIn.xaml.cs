@@ -4,7 +4,6 @@ using System.IO;
 using PalsPolls.Tables;
 using SQLite;
 using Xamarin.Forms;
-using PalsPolls.ViewModels;
 
 namespace PalsPolls
 {
@@ -14,7 +13,7 @@ namespace PalsPolls
         {
             InitializeComponent();
             SetValue(NavigationPage.HasNavigationBarProperty, false);
-            
+
         }
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
@@ -26,7 +25,6 @@ namespace PalsPolls
 
             if (myquery != null)
             {
-                App._userName = myquery.UserName;
                 App.Current.MainPage = new NavigationPage(new HomePage(myquery));
             }
             else
