@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
+
 namespace PalsPolls.Services
 {
     public class DataBaseServices
@@ -17,8 +18,7 @@ namespace PalsPolls.Services
         public DataBaseServices(string dbPath)
         {
             db = new SQLiteAsyncConnection(dbPath);
-            db.CreateTableAsync<RegUserTable>();
-            
+            db.CreateTableAsync<RegUserTable>();            
         }
 
         public String HashPass(String password)

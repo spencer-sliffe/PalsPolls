@@ -22,7 +22,8 @@ namespace PalsPolls.Views
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3");
             var db = new SQLiteConnection(dbpath);
-            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && App.myDataBase.HashPass(u.Password).Equals(App.myDataBase.HashPass(txtPassword.Text))).FirstOrDefault();
+            string pass = App.myDataBase.HashPass(txtPassword.Text);
+            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && u.Password.Equals(pass)).FirstOrDefault();
             if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text) || string.IsNullOrWhiteSpace(newTxtPassword.Text))
             {
                 await DisplayAlert("Error", "Must answer all fields", "Okay");

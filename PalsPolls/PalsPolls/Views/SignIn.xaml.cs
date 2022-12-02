@@ -5,6 +5,7 @@ using PalsPolls.Tables;
 using SQLite;
 using Xamarin.Forms;
 using PalsPolls.ViewModels;
+using PalsPolls.Services;
 
 namespace PalsPolls
 {
@@ -22,7 +23,8 @@ namespace PalsPolls
 
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3");
             var db = new SQLiteConnection(dbpath);
-            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && App.myDataBase.HashPass(u.Password).Equals(App.myDataBase.HashPass(txtPassword.Text))).FirstOrDefault();
+            string pass = App.myDataBase.HashPass(txtPassword.Text);
+            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && u.Password.Equals(pass)).FirstOrDefault();
 
             if (myquery != null)
             {
