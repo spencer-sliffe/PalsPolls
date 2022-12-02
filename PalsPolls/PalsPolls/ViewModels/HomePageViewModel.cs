@@ -71,6 +71,13 @@ namespace PalsPolls.ViewModels
             Task.Run(async () => await LoadData());
             MessagingCenter.Subscribe<PollCreatingPageViewModel, PollTable>
                 (this, Events.PollTableAdded, OnPollCreated);
+            MessagingCenter.Subscribe<MyAccountPageViewModel, PollTable>
+                (this, Events.PollTableDeleted, OnPollDeleted);
+        }
+
+        private void OnPollDeleted(MyAccountPageViewModel source, PollTable pollTable)
+        {
+            PollTables.Remove(PollTables.Where(i => i.PostId == pollTable.PostId).Single());
         }
 
         private void OnPollCreated(PollCreatingPageViewModel source, PollTable polltable)

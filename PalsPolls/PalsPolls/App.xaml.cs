@@ -12,8 +12,8 @@ namespace PalsPolls
     {
         private static DataBaseServices db;
         private static PollServices db1;
+        public static string _userName { get; set; }
 
-      
         public static PollServices myPollServices
         {
             get
@@ -42,7 +42,7 @@ namespace PalsPolls
 
         public App()
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NzQ5NDUzQDMyMzAyZTMzMmUzMGtlemQ5RXFZUXRNQkYvcFRYbitVUnRseDJqeXdabVdBUEFoeTlnNDdwc0U9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NzcyMDY3QDMyMzAyZTMzMmUzMGxqNHBSeUpqcTlUYXhGYzdxdUd1czQrMkJNeHVpOXVsRFUyVXVyb2Q0SjA9");
             InitializeComponent();
 
             //MainPage = new MainPage();

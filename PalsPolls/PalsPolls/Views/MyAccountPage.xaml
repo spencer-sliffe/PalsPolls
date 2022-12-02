@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
+<<<<<<< Updated upstream
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PalsPolls.Views.MyAccountPage"
     BackgroundColor="#FFF9E9"
@@ -9,4 +10,66 @@
         <ScrollView />
     </ContentPage.Content>
 </ContentPage>
+=======
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:PalsPolls.ViewModels" xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" x:DataType="viewmodels:MyAccountPageViewModel" 
+    x:Class="PalsPolls.MyAccountPage"
+    Title="Account Page"
+    BackgroundColor="#050A30"
+    >
 
+<ContentPage.BindingContext>
+
+    <viewmodels:MyAccountPageViewModel x:Name="vm" />
+
+</ContentPage.BindingContext>
+
+    <syncfusion:SfListView
+                    ItemsSource= "{Binding PollTables}"
+                    IsStickyHeader="True"
+                    HeaderSize="100"                   
+                    ItemSize="150"
+                    SelectionBackgroundColor="#050A30"
+                    x:Name="listView"
+                    >        
+        
+        <syncfusion:SfListView.HeaderTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#050A30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid Grid.Column="0"  Grid.Row="0" HorizontalOptions="Start" VerticalOptions="End">
+                        <Button Text="&lt;HOMEPAGE" FontFamily="Exo" FontSize="20" TextColor="#7EC8E3" Clicked="Button_Clicked"/>
+                    </Grid>
+                    <Grid Grid.ColumnSpan="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End">
+                        <Label Text="Your Polls" FontFamily="Cursive" FontSize="31" TextColor="#7EC8E3"/>
+>>>>>>> Stashed changes
+
+                    </Grid>
+              
+                </Grid>
+            </DataTemplate>
+        </syncfusion:SfListView.HeaderTemplate>
+        <syncfusion:SfListView.LayoutManager>
+            <syncfusion:GridLayout SpanCount="1" />
+        </syncfusion:SfListView.LayoutManager>
+        <syncfusion:SfListView.ItemTemplate>
+
+            <DataTemplate x:DataType="viewmodels:PollTableViewModel" >
+                <Grid Padding="2" Margin="2" >                   
+                        <Frame x:Name="frame" HasShadow="True" Padding="2" Margin="2" BackgroundColor="#7EC8E3">
+                            <StackLayout>
+                                <Grid>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding PostUserName}" FontSize="18" FontFamily="Exo" HorizontalOptions="Start" TextColor="#050A30"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding CreatedDate}" FontSize="18" FontFamily="Exo" HorizontalOptions="End" TextColor="#050A30"/>
+                                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding PostContent}" FontSize="35" FontFamily="Exo" HorizontalOptions="Center" TextColor="#000C66"/>
+                                    <Button Grid.Row="2" Grid.Column="0" Text="{Binding PostContent1}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF"></Button>
+                                    <Button Grid.Row="2" Grid.Column="1" Text="{Binding PostContent2}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" />                                   
+                                </Grid>                                                              
+                           </StackLayout>
+                        </Frame>
+                </Grid>
+
+            </DataTemplate>
+
+        </syncfusion:SfListView.ItemTemplate>
+    </syncfusion:SfListView>
+
+</ContentPage>
