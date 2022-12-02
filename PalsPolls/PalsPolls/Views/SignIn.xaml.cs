@@ -22,7 +22,7 @@ namespace PalsPolls
 
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDataBase.db3");
             var db = new SQLiteConnection(dbpath);
-            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && u.Password.Equals(txtPassword.Text)).FirstOrDefault();
+            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(txtUsername.Text) && App.myDataBase.HashPass(u.Password).Equals(App.myDataBase.HashPass(txtPassword.Text))).FirstOrDefault();
 
             if (myquery != null)
             {
