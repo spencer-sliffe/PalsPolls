@@ -5,7 +5,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:local="clr-namespace:PalsPolls" xmlns:viewmodels="clr-namespace:PalsPolls.ViewModels" x:DataType="viewmodels:HomePageViewModel" 
         x:Class="PalsPolls.HomePage"
-        BackgroundColor="#050A30"
+        BackgroundColor="#FFFBE0"
         Title="POLL INBOX">
 
     
@@ -22,11 +22,11 @@
                     FooterSize="70"
                     HeaderSize="100"                   
                     ItemSize="150"
-                    SelectionBackgroundColor="#050A30"
+                    SelectionBackgroundColor="#FFFBE0"
                     >        
         <syncfusion:SfListView.FooterTemplate>
             <DataTemplate>
-                <Grid BackgroundColor="#050A30" HeightRequest="55" Padding="0,0,0,15">
+                <Grid BackgroundColor="#FFFBE0" HeightRequest="55" Padding="0,0,0,15">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="20" />
                         <ColumnDefinition Width="*" />
@@ -66,17 +66,17 @@
                     HeightRequest="60"
                     Clicked="ImageButton_Clicked"/>
                     </Grid>
-                    <BoxView Grid.Column="0" BackgroundColor="#050A30" />
-                    <BoxView Grid.Column="2" BackgroundColor="#050A30" />
-                    <BoxView Grid.Column="4" BackgroundColor="#050A30" />
-                    <BoxView Grid.Column="6" BackgroundColor="#050A30" />
-                    <BoxView Grid.Column="8" BackgroundColor="#050A30" />
+                    <BoxView Grid.Column="0" BackgroundColor="#FFFBE0" />
+                    <BoxView Grid.Column="2" BackgroundColor="#FFFBE0" />
+                    <BoxView Grid.Column="4" BackgroundColor="#FFFBE0" />
+                    <BoxView Grid.Column="6" BackgroundColor="#FFFBE0" />
+                    <BoxView Grid.Column="8" BackgroundColor="#FFFBE0" />
                 </Grid>
             </DataTemplate>
         </syncfusion:SfListView.FooterTemplate>
         <syncfusion:SfListView.HeaderTemplate>
             <DataTemplate>
-                <Grid BackgroundColor="#050A30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid BackgroundColor="#FFFBE0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                     <Grid Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End">
                         <Label Text="Pals Polls" FontFamily="Cursive" FontSize="31" TextColor="#7EC8E3"/>
 
