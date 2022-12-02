@@ -7,13 +7,16 @@ namespace PalsPolls.ViewModels
 {
     public class PollTableViewModel : BaseViewModel
     {
-        public Guid PostId { get; set; }
+        public Guid PostId
+        {
+            get;
+            set;
+        }
 
         public PollTableViewModel()
         {
 
         }
-
 
         public PollTableViewModel(PollTable polltable)
         {
@@ -29,7 +32,10 @@ namespace PalsPolls.ViewModels
 
         public string PostUserName
         {
-            get { return _postUserName; }
+            get
+            {
+                return _postUserName;
+            }
             set
             {
                 SetValue(ref _postUserName, value);
@@ -42,7 +48,10 @@ namespace PalsPolls.ViewModels
 
         public string PostContent
         {
-            get { return _content; }
+            get
+            {
+                return _content;
+            }
             set
             {
                 SetValue(ref _content, value);
@@ -54,7 +63,10 @@ namespace PalsPolls.ViewModels
 
         public string PostContent1
         {
-            get { return _content1; }
+            get
+            {
+                return _content1;
+            }
             set
             {
                 SetValue(ref _content1, value);
@@ -66,7 +78,10 @@ namespace PalsPolls.ViewModels
 
         public string PostContent2
         {
-            get { return _content2; }
+            get
+            {
+                return _content2;
+            }
             set
             {
                 SetValue(ref _content2, value);
@@ -78,7 +93,10 @@ namespace PalsPolls.ViewModels
 
         public DateTime CreatedDate
         {
-            get { return _createdDate; }
+            get
+            {
+                return _createdDate;
+            }
             set
             {
                 SetValue(ref _createdDate, value);
@@ -88,8 +106,10 @@ namespace PalsPolls.ViewModels
 
         public string PollTable
         {
-            get { return $"{PostContent} {PostContent1} {PostContent2} {CreatedDate}"; }
+            get
+            {
+                return $"{PostContent} {PostContent1} {PostContent2} {CreatedDate}";
+            }
         }
     }
 }
-

@@ -10,8 +10,16 @@ namespace PalsPolls.ViewModels
 {
     public class PollCreatingPageViewModel : BaseViewModel
     {
-        public PollTable PollTable { get; private set; }
-        public ICommand PostCommand { get; private set; }
+        public PollTable PollTable
+        {
+            get;
+            private set;
+        }
+        public ICommand PostCommand
+        {
+            get;
+            private set;
+        }
 
         public PollCreatingPageViewModel(PollTableViewModel viewModel)
         {
@@ -45,4 +53,3 @@ namespace PalsPolls.ViewModels
         }
     }
 }
-

@@ -30,7 +30,7 @@ namespace PalsPolls.ViewModels
             _isDataLoaded = true;
             var polltables = await App.myPollServices.ReadPosts();
             foreach (var polltable in polltables.Reverse())
-                PollTables.Add(new PollTableViewModel(polltable));              
+                PollTables.Add(new PollTableViewModel(polltable));
 
 
             /*SfListView listView = new SfListView
@@ -67,7 +67,7 @@ namespace PalsPolls.ViewModels
 
         public HomePageViewModel()
         {
-            
+
             Task.Run(async () => await LoadData());
             MessagingCenter.Subscribe<PollCreatingPageViewModel, PollTable>
                 (this, Events.PollTableAdded, OnPollCreated);

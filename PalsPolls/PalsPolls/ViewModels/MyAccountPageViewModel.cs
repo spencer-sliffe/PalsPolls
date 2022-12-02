@@ -17,12 +17,23 @@ namespace PalsPolls.ViewModels
 
         private readonly string myUN;
 
-        public DataTemplate ItemTemplate { get; set; }
+        public DataTemplate ItemTemplate
+        {
+            get;
+            set;
+        }
 
-        public ObservableCollection<PollTableViewModel> PollTables { get; private set; }
-            = new ObservableCollection<PollTableViewModel>();
+        public ObservableCollection<PollTableViewModel> PollTables
+        {
+            get;
+            private set;
+        } = new ObservableCollection<PollTableViewModel>();
 
-        public ICommand LoadDataCommand { get; private set; }
+        public ICommand LoadDataCommand
+        {
+            get;
+            private set;
+        }
 
         private async Task LoadData()
         {
@@ -32,7 +43,7 @@ namespace PalsPolls.ViewModels
             _isDataLoaded = true;
             var polltables = await App.myPollServices.ReadPosts();
             foreach (var polltable in from polltable in polltables where polltable.PostUserName == myUN select polltable)
-                    PollTables.Add(new PollTableViewModel(polltable));
+                PollTables.Add(new PollTableViewModel(polltable));
         }
         public MyAccountPageViewModel()
         {
@@ -42,4 +53,3 @@ namespace PalsPolls.ViewModels
 
     }
 }
-
