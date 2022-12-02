@@ -29,7 +29,7 @@
                                 Placeholder="Username..."
                                 TextColor="#050A30"
                                 PlaceholderColor="#050A30"
-                                BackgroundColor="#7EC8E3"
+                                BackgroundColor="#7EC8E3"                                
                                 FontFamily="Exo"
                                 />
                     </StackLayout>
@@ -48,21 +48,23 @@
                         <Button
                             VerticalOptions="Center"
                             Text="Login"
-                            TextColor="#00137E"
+                            TextColor="#050A30"
                             Clicked="Button_Clicked"
                             FontFamily="Exo"
-                            BorderColor="#00137E"
+                            BackgroundColor="#7EC8E3"
+                            BorderColor="#7EC8E3"
                             BorderWidth="1"/>
 
                         <Label HorizontalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="Don't have an account? "
-                                            TextColor="#00137E"
+                                            TextColor="#050A30"
                                             FontFamily="Exo"/>
                                     <Span Text="Register"
-                                            TextColor="#00137E"                                                                 
-                                            FontFamily="Exo"/>
+                                            TextColor="#050A30"                                                                 
+                                            FontFamily="Exo"
+                                            TextDecorations="Underline"/>
                                 </FormattedString>
                             </Label.FormattedText>
                             <Label.GestureRecognizers>

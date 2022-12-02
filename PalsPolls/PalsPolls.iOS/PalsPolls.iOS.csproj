@@ -171,5 +171,11 @@
     <BundleResource Include="Resources\iconizer-settings-2.png" />
     <BundleResource Include="Resources\iconizer-WriteAPoll.png" />
     <BundleResource Include="Resources\iconizer-icon.png" />
+    <BundleResource Include="Resources\iconizer-icon-2.png" />
+    <BundleResource Include="Resources\Mediamodifier-Design-Template.png" />
+    <BundleResource Include="Resources\iconizer-iconizer-AccountIcon_1.png" />
+    <BundleResource Include="Resources\iconizer-iconizer-AddFriends_1-2.png" />
+    <BundleResource Include="Resources\iconizer-iconizer-iconizer-settings.png" />
+    <BundleResource Include="Resources\iconizer-iconizer-WriteAPoll-2.png" />
   </ItemGroup>
 </Project>

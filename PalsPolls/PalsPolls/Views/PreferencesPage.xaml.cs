@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using PalsPolls.Services;
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;
+using System.Linq;
 
 namespace PalsPolls.Views
 {
@@ -53,6 +54,28 @@ namespace PalsPolls.Views
         private String PhoneNumber(RegUserTable MyAccount)
         {
             return MyAccount.PhoneNumber;
+        }
+
+        void ViewCell_Tapped_2(System.Object sender, System.EventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var result = await this.DisplayAlert("Warning", "About To Delete Account!", "Okay", "Cancel");
+
+                if (result == true)
+                {
+                    await App.myDataBase.DeleteUser(m_UserTable);
+                    var polltables = await App.myPollServices.ReadPosts();
+                    foreach (var polltable in from polltable in polltables where polltable.PostUserName == m_UserTable.UserName select polltable)
+                        await App.myPollServices.DeletePost(polltable);
+
+                    await Navigation.PushAsync(new SignIn());
+                }
+                else
+                {
+                    await Navigation.PopAsync();
+                }
+            });
         }
     }
 }

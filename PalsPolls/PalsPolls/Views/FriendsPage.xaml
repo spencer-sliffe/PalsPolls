@@ -6,7 +6,12 @@
     BackgroundColor="#FFFBE0"
     Title="Add Friends">
     <ContentPage.Content>
-        <ScrollView/>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Under Construction" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Exo" FontSize="25" TextColor="#050A30"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
 

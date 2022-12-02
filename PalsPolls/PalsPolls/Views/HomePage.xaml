@@ -39,28 +39,28 @@
                         <ColumnDefinition Width="20" />
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="iconizer-WriteAPoll.png"
+                        <ImageButton Source="iconizer-iconizer-WriteAPoll-2.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
                     HeightRequest="60"
                     Clicked="TapGestureRecognizer_Tapped_1"/>
                     </Grid>
                     <Grid Grid.Column="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="iconizer-settings-2.png"
+                        <ImageButton Source="iconizer-iconizer-iconizer-settings.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
                     HeightRequest="60"
                     Clicked="TapGestureRecognizer_Tapped"/>
                     </Grid>
                     <Grid Grid.Column="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="iconizer-AccountIcon_1.png"
+                        <ImageButton Source="iconizer-iconizer-AccountIcon_1.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="50"
                     HeightRequest="50"
                     Clicked="TapGestureRecognizer_Tapped_2"/>
                     </Grid>
                     <Grid Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                        <ImageButton Source="iconizer-AddFriends_1.png"
+                        <ImageButton Source="iconizer-iconizer-AddFriends_1-2.png"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="60"
                     HeightRequest="60"
@@ -78,7 +78,7 @@
             <DataTemplate>
                 <Grid BackgroundColor="#FFFBE0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                     <Grid Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End">
-                        <Label Text="Pals Polls" FontFamily="Cursive" FontSize="31" TextColor="#7EC8E3"/>
+                        <Label Text="Pals Polls" FontFamily="Cursive" FontSize="31" TextColor="#050A30"/>
 
                     </Grid>
                 </Grid>
@@ -96,7 +96,7 @@
                                 <Grid>
                                     <Label Grid.Row="0" Grid.Column="0" Text="{Binding PostUserName}" FontSize="18" FontFamily="Exo" HorizontalOptions="Start" TextColor="#050A30"/>
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding CreatedDate}" FontSize="18" FontFamily="Exo" HorizontalOptions="End" TextColor="#050A30"/>
-                                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding PostContent}" FontSize="35" FontFamily="Exo" HorizontalOptions="Center" TextColor="#000C66"/>
+                                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding PostContent}" FontSize="20" FontFamily="Exo" HorizontalOptions="Center" TextColor="#000C66"/>
                                     <Button Grid.Row="2" Grid.Column="0" Text="{Binding PostContent1}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" />
                                     <Button Grid.Row="2" Grid.Column="1" Text="{Binding PostContent2}" FontSize="27" FontFamily="Exo" HorizontalOptions="Center" TextColor="#0000FF" />
                                 </Grid>

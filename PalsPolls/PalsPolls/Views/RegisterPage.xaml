@@ -79,11 +79,11 @@
                     <StackLayout Grid.Row="5">
                         <Button Text="Register"
                                 HorizontalOptions="CenterAndExpand"
-                                TextColor="#7EC8E3"
+                                TextColor="#050A30"
                                 FontSize="20"
-                                BorderColor="#7EC8E3"
+                                BorderColor="#7EC8E3"                               
                                 BorderWidth="1"
-                                BackgroundColor="Transparent"
+                                BackgroundColor="#7EC8E3"
                                 WidthRequest="100"
                                 Clicked="Handle_Clicked"
                                 FontFamily="Exo"/>

@@ -77,6 +77,14 @@
                         </StackLayout>
 
                     </ViewCell>
+                    <ViewCell Tapped="ViewCell_Tapped_2">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label Text="Delete Account"
+                                   TextColor="DarkRed"
+                                   FontSize="16"/>
+                        </StackLayout>
+
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>
