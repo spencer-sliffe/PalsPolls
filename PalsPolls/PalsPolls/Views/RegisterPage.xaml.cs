@@ -22,15 +22,25 @@ namespace PalsPolls
         {
             var email = EntryUserEmail.Text;
 
+            var pass = EntryUserPassword.Text;
+
             var emailPattern = "^(?(\")(\".+?(?<!\\\\)\"@)|(([0-9a-z]((\\.(?!\\.))|[-!#\\$%&'\\*\\+/=\\?\\^`\\{\\}\\|~\\w])*)(?<=[0-9a-z])@))(?(\\[)(\\[(\\d{1,3}\\.){3}\\d{1,3}\\])|(([0-9a-z][-\\w]*[0-9a-z]*\\.)+[a-z0-9][\\-a-z0-9]{0,22}[a-z0-9]))$";
 
+            var passPattern = @"^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$";
 
             if (string.IsNullOrWhiteSpace(EntryUserName.Text) || string.IsNullOrWhiteSpace(EntryUserPassword.Text) || string.IsNullOrWhiteSpace(EntryUserPhoneNumber.Text))
             {
                 await DisplayAlert("Error", "Must answer all fields", "Okay");
             }
-
-            else if (Regex.IsMatch(email, emailPattern))
+            else if (Regex.IsMatch(pass, passPattern) != true)
+            {
+                ErrorLabel.Text = "Password must contain a numeric, lowercase, uppercase, special character";
+            }
+            else if (Regex.IsMatch(email, emailPattern) != true)
+            {
+                ErrorLabel.Text = "Email is not valid";
+            }
+            else
             {
                 AddNewUser();
 
@@ -41,10 +51,6 @@ namespace PalsPolls
                     if (result)
                         await Navigation.PushAsync(new SignIn());
                 });
-            }
-            else
-            {
-                ErrorLabel.Text = "Email is not valid";
             }
         }
 
